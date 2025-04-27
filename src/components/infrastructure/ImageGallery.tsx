@@ -4,25 +4,25 @@ import { Card, CardContent } from "@/components/ui/card";
 export const ImageGallery: React.FC = () => {
   const images = [
     {
-      url: "https://cdn.poehali.dev/files/7f6d4156-8517-439d-9207-367a55fe18bc.jpg",
-      alt: "Вид на комплекс MAXX PATTAYA с высоты птичьего полета",
-      caption: "Панорамный вид на территорию MAXX PATTAYA"
+      url: "https://cdn.poehali.dev/files/30ed802f-06f8-4333-a88f-824675b14e6d.jpg",
+      alt: "Гостиная с панорамными окнами в MAXX PATTAYA",
+      caption: "Просторная гостиная с выходом во двор"
     },
     {
-      url: "https://cdn.poehali.dev/files/879cb17d-68a7-4fea-ba43-781986478350.jpg",
-      alt: "Коллаж изображений комплекса MAXX PATTAYA",
-      caption: "Территория комплекса и общий бассейн"
+      url: "https://cdn.poehali.dev/files/076a664b-6df0-49f0-960e-d3f614528afb.jpg",
+      alt: "Комфортабельная спальня в MAXX PATTAYA",
+      caption: "Уютная спальня с видом на зелень"
     },
     {
-      url: "https://cdn.poehali.dev/files/4ab6e775-6ccf-4b41-bbfe-a94a809f0a0a.jpg",
-      alt: "Вид на комплекс вилл вечером",
-      caption: "Вечерний вид на резиденции MAXX PATTAYA"
+      url: "https://cdn.poehali.dev/files/5cbb0f6e-8d1c-4dab-9954-0b0eb275391c.jpg",
+      alt: "Частный бассейн на территории виллы",
+      caption: "Собственный бассейн с деревянной террасой"
     }
   ];
 
   return (
     <div className="my-8">
-      <h3 className="text-xl font-semibold text-gray-900 mb-4">Галерея инфраструктуры комплекса</h3>
+      <h3 className="text-xl font-semibold text-gray-900 mb-4">Галерея интерьеров и экстерьеров виллы</h3>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {images.map((image, index) => (
           <Card key={index} className="overflow-hidden">
