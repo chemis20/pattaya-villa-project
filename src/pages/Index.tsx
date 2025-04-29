@@ -68,7 +68,7 @@ const Index = () => {
               <CardContent className="p-6">
                 <div className="text-center mb-6">
                   <span className="text-3xl font-bold text-purple-600">от 12,225,000 ₽</span>
-                  <p className="text-gray-500">от 7% годовых в течение 10 лет</p>
+                  <p className="text-gray-500">7% годовых в течение 10 лет</p>
                 </div>
 
                 <div className="space-y-4 mb-6">
