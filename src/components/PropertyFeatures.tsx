@@ -78,7 +78,7 @@ export const PropertyFeatures: React.FC = () => {
               
               <div className="bg-white px-6 py-4 rounded-lg shadow-sm w-full">
                 <p className="text-sm text-gray-500 mb-1">Стоимость виллы</p>
-                <p className="text-3xl font-bold text-purple-800">от 12 325 300 ₽</p>
+                <p className="text-2xl sm:text-3xl font-bold text-purple-800 whitespace-nowrap">от 12 225 000 ₽</p>
               </div>
               
               <div className="space-y-4 w-full">
