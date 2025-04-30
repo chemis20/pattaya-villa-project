@@ -3,28 +3,24 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 export const PropertyGallery = () => {
   const images = [
     {
-      src: "https://i.ibb.co/gFcw35t/image1.jpg", // Исправлено с https://ibb.co/gFcw35tf
+      src: "https://i.ibb.co/gbmKsgf/IMG-6369.jpg",
       alt: "Фасад виллы с бассейном",
     },
     {
-      src: "https://i.ibb.co/4nPGGG6/image2.jpg", // Исправлено с https://ibb.co/4nPGGG64
+      src: "https://i.ibb.co/8LFNZR5/IMG-6368.jpg",
       alt: "Гостиная с панорамными окнами",
     },
     {
-      src: "https://i.ibb.co/b5DgDrW/image3.jpg", // Исправлено с https://ibb.co/b5DgDrWM
+      src: "https://i.ibb.co/JDnv3xz/IMG-6367.jpg",
       alt: "Кухня открытой планировки",
     },
     {
-      src: "https://i.ibb.co/F4FNR9m/image4.jpg", // Исправлено с https://ibb.co/F4FNR9mC
+      src: "https://i.ibb.co/DHm29x6/IMG-6374.jpg",
       alt: "Спальня с видом на бассейн",
     },
     {
-      src: "https://i.ibb.co/HpHfc51/image5.jpg", // Исправлено с https://ibb.co/HpHfc517
+      src: "https://i.ibb.co/jkhpv3W/IMG-6370.jpg",
       alt: "Ванная комната с душем",
-    },
-    {
-      src: "https://i.ibb.co/BHxWv16/image6.jpg", // Исправлено с https://ibb.co/BHxWv16s
-      alt: "Частный бассейн виллы",
     },
   ];
 
