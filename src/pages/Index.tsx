@@ -43,7 +43,7 @@ const Index = () => {
       <div className="relative h-[70vh] bg-gradient-to-r from-blue-900 to-purple-800 overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="https://yapx.ru/image/YyAIw"
+            src="https://i.postimg.cc/Y9Q56w2F/IMG-6432.jpg"
             alt="Вилла в Паттайе" 
             className="w-full h-full object-cover opacity-80"
           />
