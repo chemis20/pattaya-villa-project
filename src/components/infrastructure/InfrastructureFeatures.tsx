@@ -1,6 +1,6 @@
 import React from "react";
 import { InfrastructureCard } from "./InfrastructureCard";
-import { Hotel, Coffee, ParkingCircle, Waves, UmbrellaBeach, Shield } from "lucide-react";
+import { Hotel, Coffee, ParkingCircle, Waves, Umbrella, Shield } from "lucide-react";
 
 interface InfrastructureFeaturesProps {
   title: string;
@@ -29,7 +29,7 @@ export const InfrastructureFeatures: React.FC<InfrastructureFeaturesProps> = ({ 
       description: "Несколько общих бассейнов на территории комплекса"
     },
     {
-      icon: <UmbrellaBeach className="h-8 w-8 text-purple-500" />,
+      icon: <Umbrella className="h-8 w-8 text-purple-500" />,
       title: "Лаунж-зона",
       description: "Комфортные зоны отдыха с лежаками и навесами"
     },
@@ -45,12 +45,13 @@ export const InfrastructureFeatures: React.FC<InfrastructureFeaturesProps> = ({ 
       <h3 className="text-xl font-bold text-gray-900">{title}</h3>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
         {features.map((feature, index) => (
-          <InfrastructureCard 
-            key={index}
-            icon={feature.icon}
-            title={feature.title}
-            description={feature.description}
-          />
+          <div key={index} className="bg-white rounded-lg shadow-sm p-6 border border-gray-100">
+            <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mb-4">
+              {feature.icon}
+            </div>
+            <h4 className="text-lg font-medium mb-2">{feature.title}</h4>
+            <p className="text-gray-600">{feature.description}</p>
+          </div>
         ))}
       </div>
     </div>
