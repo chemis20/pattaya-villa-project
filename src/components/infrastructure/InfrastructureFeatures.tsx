@@ -24,7 +24,7 @@ export const InfrastructureFeatures: React.FC<InfrastructureFeaturesProps> = ({ 
     {
       icon: <Umbrella className="h-8 w-8" />,
       title: "Дополнительные удобства",
-      description: "Услуги, которые делают отдых незабываемым",
+      description: "Услуги для незабываемого отдыха",
       gradientFrom: "purple",
       colorAccent: "purple",
       items: [
@@ -50,7 +50,7 @@ export const InfrastructureFeatures: React.FC<InfrastructureFeaturesProps> = ({ 
 
   return (
     <div className="space-y-6">
-      <h3 className="text-xl font-bold text-gray-900">{title}</h3>
+      <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {features.map((feature, index) => (
           <InfrastructureCard

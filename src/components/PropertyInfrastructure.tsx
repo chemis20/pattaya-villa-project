@@ -2,7 +2,6 @@ import React from "react";
 import { InfrastructureFeatures } from "./infrastructure/InfrastructureFeatures";
 import { HomeFeatures } from "./infrastructure/HomeFeatures";
 import { LocationInfo } from "./infrastructure/LocationInfo";
-import { ImageGallery } from "./infrastructure/ImageGallery";
 
 export const PropertyInfrastructure: React.FC = () => {
   return (
@@ -10,8 +9,6 @@ export const PropertyInfrastructure: React.FC = () => {
       <InfrastructureFeatures title="Инфраструктура проекта MAXX PATTAYA" />
       
       <HomeFeatures />
-      
-      <ImageGallery />
       
       <LocationInfo />
       
