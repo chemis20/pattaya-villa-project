@@ -37,8 +37,8 @@ export const InfrastructureFeatures: React.FC<InfrastructureFeaturesProps> = ({ 
       icon: <ShieldCheck className="h-8 w-8" />,
       title: "Безопасность",
       description: "Надежная защита и круглосуточная охрана",
-      gradientFrom: "pink",
-      colorAccent: "pink",
+      gradientFrom: "green",
+      colorAccent: "green",
       items: [
         "Охрана 24/7",
         "Система видеонаблюдения",

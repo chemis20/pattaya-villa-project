@@ -10,7 +10,7 @@ interface HomeFeatureProps {
 const HomeFeature: React.FC<HomeFeatureProps> = ({ imageUrl, title, description }) => {
   return (
     <Card className="overflow-hidden">
-      <div className="h-56 w-full overflow-hidden">
+      <div className="h-44 w-full overflow-hidden" style={{ aspectRatio: "16/9" }}>
         <img 
           src={imageUrl} 
           alt={title} 
@@ -18,8 +18,8 @@ const HomeFeature: React.FC<HomeFeatureProps> = ({ imageUrl, title, description 
         />
       </div>
       <CardContent className="p-4">
-        <h4 className="text-lg font-semibold mb-2 text-gray-900">{title}</h4>
-        <p className="text-gray-600">{description}</p>
+        <h4 className="text-base font-semibold mb-2 text-gray-900">{title}</h4>
+        <p className="text-sm text-gray-600">{description}</p>
       </CardContent>
     </Card>
   );
@@ -46,7 +46,7 @@ export const HomeFeatures: React.FC = () => {
 
   return (
     <div className="space-y-6">
-      <h3 className="text-xl font-bold text-gray-900">Особенности дома</h3>
+      <h3 className="text-lg font-bold text-gray-900">Особенности дома</h3>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {features.map((feature, index) => (
           <HomeFeature

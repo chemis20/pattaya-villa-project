@@ -7,9 +7,9 @@ import { ImageGallery } from "./infrastructure/ImageGallery";
 export const PropertyInfrastructure: React.FC = () => {
   return (
     <div className="space-y-8">
-      <HomeFeatures />
-      
       <InfrastructureFeatures title="Инфраструктура проекта MAXX PATTAYA" />
+      
+      <HomeFeatures />
       
       <ImageGallery />
       
