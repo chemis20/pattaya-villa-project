@@ -1,6 +1,6 @@
 import React from "react";
 import { InfrastructureCard } from "./InfrastructureCard";
-import { Home, Sofa, Bed } from "lucide-react";
+import { Building, Umbrella, ShieldCheck } from "lucide-react";
 
 interface InfrastructureFeaturesProps {
   title: string;
@@ -9,42 +9,42 @@ interface InfrastructureFeaturesProps {
 export const InfrastructureFeatures: React.FC<InfrastructureFeaturesProps> = ({ title }) => {
   const features = [
     {
-      icon: <Home className="h-8 w-8" />,
-      title: "Дом",
-      description: "Просторный дом с современной планировкой",
+      icon: <Building className="h-8 w-8" />,
+      title: "Территория комплекса",
+      description: "Всё необходимое для комфортного отдыха",
       gradientFrom: "blue",
       colorAccent: "blue",
       items: [
-        "1-2 этажа",
-        "Общая площадь от 124 м²",
-        "Собственный участок",
-        "Виды на район и горы"
+        "Бассейны и пляжная зона",
+        "Рестораны и бары",
+        "Парковка для автомобилей",
+        "Ландшафтный дизайн"
       ]
     },
     {
-      icon: <Sofa className="h-8 w-8" />,
-      title: "Гостиная",
-      description: "Комфортная гостиная для отдыха и приема гостей",
+      icon: <Umbrella className="h-8 w-8" />,
+      title: "Дополнительные удобства",
+      description: "Услуги, которые делают отдых незабываемым",
       gradientFrom: "purple",
       colorAccent: "purple",
       items: [
-        "Просторная зона отдыха",
-        "Панорамные окна",
-        "Высокие потолки",
-        "Выход к бассейну"
+        "Спа-центр и массаж",
+        "Фитнес-зал и йога",
+        "Лаунж-зона для отдыха",
+        "Трансфер до аэропорта"
       ]
     },
     {
-      icon: <Bed className="h-8 w-8" />,
-      title: "Спальни и бассейн",
-      description: "Комфортные спальни и собственный бассейн",
+      icon: <ShieldCheck className="h-8 w-8" />,
+      title: "Безопасность",
+      description: "Надежная защита и круглосуточная охрана",
       gradientFrom: "pink",
       colorAccent: "pink",
       items: [
-        "2-3 спальни",
-        "Главная спальня с ванной",
-        "Частный бассейн",
-        "Терраса для отдыха"
+        "Охрана 24/7",
+        "Система видеонаблюдения",
+        "Закрытая территория",
+        "Контроль доступа"
       ]
     }
   ];
