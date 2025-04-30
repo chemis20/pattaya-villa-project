@@ -1,67 +1,55 @@
 import React from "react";
 import { InfrastructureCard } from "./InfrastructureCard";
-import { Building, Dumbbell, Shield } from "lucide-react";
+import { Hotel, Coffee, ParkingCircle, Waves, UmbrellaBeach, Shield } from "lucide-react";
 
 interface InfrastructureFeaturesProps {
   title: string;
 }
 
 export const InfrastructureFeatures: React.FC<InfrastructureFeaturesProps> = ({ title }) => {
-  const facilityFeatures = [
+  const features = [
     {
-      title: "Территория комплекса",
-      items: [
-        "5-звездочное лобби",
-        "Большой общий бассейн",
-        "Детский бассейн",
-        "Парковка",
-        "Зеленая зона (15% территории)",
-      ],
-      icon: <Building className="h-6 w-6" />,
-      gradientFrom: "purple",
-      colorAccent: "purple",
+      icon: <Hotel className="h-8 w-8 text-purple-500" />,
+      title: "Управление отелем",
+      description: "Полное обслуживание территории профессиональным оператором"
     },
     {
-      title: "Удобства и сервисы",
-      items: [
-        "Фитнес-зал",
-        "Сауна",
-        "Зона барбекю",
-        "Ресторан",
-        "Лаунж-зона у озера",
-      ],
-      icon: <Dumbbell className="h-6 w-6" />,
-      gradientFrom: "blue",
-      colorAccent: "blue",
+      icon: <Coffee className="h-8 w-8 text-purple-500" />,
+      title: "Рестораны и кафе",
+      description: "Несколько ресторанов с тайской и международной кухней"
     },
     {
+      icon: <ParkingCircle className="h-8 w-8 text-purple-500" />,
+      title: "Парковка",
+      description: "Удобная парковка для личного и арендованного транспорта"
+    },
+    {
+      icon: <Waves className="h-8 w-8 text-purple-500" />,
+      title: "Бассейны",
+      description: "Несколько общих бассейнов на территории комплекса"
+    },
+    {
+      icon: <UmbrellaBeach className="h-8 w-8 text-purple-500" />,
+      title: "Лаунж-зона",
+      description: "Комфортные зоны отдыха с лежаками и навесами"
+    },
+    {
+      icon: <Shield className="h-8 w-8 text-purple-500" />,
       title: "Безопасность",
-      items: [
-        "Охрана 24 часа",
-        "Система видеонаблюдения",
-        "Закрытая территория",
-        "Контроль доступа",
-        "Профессиональное управление",
-      ],
-      icon: <Shield className="h-6 w-6" />,
-      gradientFrom: "green",
-      colorAccent: "green",
-    },
+      description: "Круглосуточная охрана и видеонаблюдение"
+    }
   ];
 
   return (
     <div className="space-y-6">
-      <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
-      
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {facilityFeatures.map((feature, index) => (
-          <InfrastructureCard
+      <h3 className="text-xl font-bold text-gray-900">{title}</h3>
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+        {features.map((feature, index) => (
+          <InfrastructureCard 
             key={index}
-            title={feature.title}
-            items={feature.items}
             icon={feature.icon}
-            gradientFrom={feature.gradientFrom}
-            colorAccent={feature.colorAccent}
+            title={feature.title}
+            description={feature.description}
           />
         ))}
       </div>

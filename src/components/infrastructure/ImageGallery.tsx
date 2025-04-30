@@ -1,42 +1,48 @@
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 export const ImageGallery: React.FC = () => {
-  const images = [
+  const infrastructureImages = [
     {
-      url: "https://cdn.poehali.dev/files/30ed802f-06f8-4333-a88f-824675b14e6d.jpg",
-      alt: "Гостиная с панорамными окнами в MAXX PATTAYA",
-      caption: "Просторная гостиная с выходом во двор"
+      src: "https://i.postimg.cc/fTQT8d6x/image-2.jpg",
+      alt: "Ресторан при отеле",
+      title: "Рестораны и кафе",
+      description: "Современные заведения общественного питания с широким выбором блюд тайской и международной кухни"
     },
     {
-      url: "https://cdn.poehali.dev/files/076a664b-6df0-49f0-960e-d3f614528afb.jpg",
-      alt: "Комфортабельная спальня в MAXX PATTAYA",
-      caption: "Уютная спальня с видом на зелень"
+      src: "https://i.postimg.cc/tRV0f9tW/image-3.jpg",
+      alt: "Фитнес-центр",
+      title: "Фитнес-центр",
+      description: "Полноценный спортивный комплекс с современным оборудованием для поддержания здорового образа жизни"
     },
     {
-      url: "https://cdn.poehali.dev/files/5cbb0f6e-8d1c-4dab-9954-0b0eb275391c.jpg",
-      alt: "Частный бассейн на территории виллы",
-      caption: "Собственный бассейн с деревянной террасой"
+      src: "https://i.postimg.cc/tX7fWV6z/image-1.jpg",
+      alt: "Общий бассейн",
+      title: "Общие бассейны",
+      description: "Просторные бассейны с зонами отдыха и обслуживанием для комфортного времяпрепровождения"
     }
   ];
 
   return (
-    <div className="my-8">
-      <h3 className="text-xl font-semibold text-gray-900 mb-4">Галерея интерьеров и экстерьеров виллы</h3>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {images.map((image, index) => (
-          <Card key={index} className="overflow-hidden">
-            <div className="aspect-video relative">
-              <img 
-                src={image.url} 
-                alt={image.alt} 
-                className="w-full h-full object-cover transition-transform hover:scale-105 duration-300" 
-              />
+    <div className="space-y-6">
+      <h3 className="text-xl font-bold text-gray-900">Общая инфраструктура комплекса</h3>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {infrastructureImages.map((image, index) => (
+          <div key={index} className="space-y-3">
+            <div className="overflow-hidden rounded-lg">
+              <AspectRatio ratio={4 / 3} className="bg-muted">
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-cover transition-all hover:scale-105 duration-300"
+                />
+              </AspectRatio>
             </div>
-            <CardContent className="p-3">
-              <p className="text-sm text-gray-600">{image.caption}</p>
-            </CardContent>
-          </Card>
+            <div>
+              <h4 className="font-semibold text-gray-900">{image.title}</h4>
+              <p className="text-sm text-gray-600">{image.description}</p>
+            </div>
+          </div>
         ))}
       </div>
     </div>
