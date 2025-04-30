@@ -7,10 +7,6 @@ export const PropertyGallery = () => {
       alt: "Фасад виллы с бассейном",
     },
     {
-      src: "https://i.postimg.cc/5YcStrTW/photo-7-2025-04-30-18-37-58.jpg",
-      alt: "Гостиная с панорамными окнами",
-    },
-    {
       src: "https://i.postimg.cc/5jBnXxf7/photo-2-2025-04-30-18-37-58.jpg",
       alt: "Кухня открытой планировки",
     },
@@ -23,8 +19,16 @@ export const PropertyGallery = () => {
       alt: "Ванная комната с душем",
     },
     {
+      src: "https://i.postimg.cc/RJ417HvP/photo-10-2025-04-30-18-37-58.jpg",
+      alt: "Терраса с видом на сад",
+    },
+    {
       src: "https://i.postimg.cc/2L7wMxHR/photo-11-2025-04-30-18-37-58.jpg",
       alt: "Зона отдыха на открытом воздухе",
+    },
+    {
+      src: "https://i.postimg.cc/5YcStrTW/photo-7-2025-04-30-18-37-58.jpg",
+      alt: "Гостиная с панорамными окнами",
     },
   ];
 
