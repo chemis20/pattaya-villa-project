@@ -1,6 +1,6 @@
 import React from "react";
 import { InfrastructureCard } from "./InfrastructureCard";
-import { Hotel, Coffee, ParkingCircle, Waves, Umbrella, Shield } from "lucide-react";
+import { Home, Sofa, Bed } from "lucide-react";
 
 interface InfrastructureFeaturesProps {
   title: string;
@@ -9,49 +9,59 @@ interface InfrastructureFeaturesProps {
 export const InfrastructureFeatures: React.FC<InfrastructureFeaturesProps> = ({ title }) => {
   const features = [
     {
-      icon: <Hotel className="h-8 w-8 text-purple-500" />,
-      title: "Управление отелем",
-      description: "Полное обслуживание территории профессиональным оператором"
+      icon: <Home className="h-8 w-8" />,
+      title: "Дом",
+      description: "Просторный дом с современной планировкой",
+      gradientFrom: "blue",
+      colorAccent: "blue",
+      items: [
+        "1-2 этажа",
+        "Общая площадь от 124 м²",
+        "Собственный участок",
+        "Виды на район и горы"
+      ]
     },
     {
-      icon: <Coffee className="h-8 w-8 text-purple-500" />,
-      title: "Рестораны и кафе",
-      description: "Несколько ресторанов с тайской и международной кухней"
+      icon: <Sofa className="h-8 w-8" />,
+      title: "Гостиная",
+      description: "Комфортная гостиная для отдыха и приема гостей",
+      gradientFrom: "purple",
+      colorAccent: "purple",
+      items: [
+        "Просторная зона отдыха",
+        "Панорамные окна",
+        "Высокие потолки",
+        "Выход к бассейну"
+      ]
     },
     {
-      icon: <ParkingCircle className="h-8 w-8 text-purple-500" />,
-      title: "Парковка",
-      description: "Удобная парковка для личного и арендованного транспорта"
-    },
-    {
-      icon: <Waves className="h-8 w-8 text-purple-500" />,
-      title: "Бассейны",
-      description: "Несколько общих бассейнов на территории комплекса"
-    },
-    {
-      icon: <Umbrella className="h-8 w-8 text-purple-500" />,
-      title: "Лаунж-зона",
-      description: "Комфортные зоны отдыха с лежаками и навесами"
-    },
-    {
-      icon: <Shield className="h-8 w-8 text-purple-500" />,
-      title: "Безопасность",
-      description: "Круглосуточная охрана и видеонаблюдение"
+      icon: <Bed className="h-8 w-8" />,
+      title: "Спальни и бассейн",
+      description: "Комфортные спальни и собственный бассейн",
+      gradientFrom: "pink",
+      colorAccent: "pink",
+      items: [
+        "2-3 спальни",
+        "Главная спальня с ванной",
+        "Частный бассейн",
+        "Терраса для отдыха"
+      ]
     }
   ];
 
   return (
     <div className="space-y-6">
       <h3 className="text-xl font-bold text-gray-900">{title}</h3>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {features.map((feature, index) => (
-          <div key={index} className="bg-white rounded-lg shadow-sm p-6 border border-gray-100">
-            <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mb-4">
-              {feature.icon}
-            </div>
-            <h4 className="text-lg font-medium mb-2">{feature.title}</h4>
-            <p className="text-gray-600">{feature.description}</p>
-          </div>
+          <InfrastructureCard
+            key={index}
+            title={feature.title}
+            items={feature.items}
+            icon={feature.icon}
+            gradientFrom={feature.gradientFrom}
+            colorAccent={feature.colorAccent}
+          />
         ))}
       </div>
     </div>
