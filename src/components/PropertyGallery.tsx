@@ -3,24 +3,28 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 export const PropertyGallery = () => {
   const images = [
     {
-      src: "https://i.ibb.co/gbmKsgf/IMG-6369.jpg",
+      src: "https://i.postimg.cc/02nt1yHj/photo-2025-04-30-18-43-47.jpg",
       alt: "Фасад виллы с бассейном",
     },
     {
-      src: "https://i.ibb.co/8LFNZR5/IMG-6368.jpg",
+      src: "https://i.postimg.cc/5YcStrTW/photo-7-2025-04-30-18-37-58.jpg",
       alt: "Гостиная с панорамными окнами",
     },
     {
-      src: "https://i.ibb.co/JDnv3xz/IMG-6367.jpg",
+      src: "https://i.postimg.cc/5jBnXxf7/photo-2-2025-04-30-18-37-58.jpg",
       alt: "Кухня открытой планировки",
     },
     {
-      src: "https://i.ibb.co/DHm29x6/IMG-6374.jpg",
+      src: "https://i.postimg.cc/zLHk8Ndk/photo-6-2025-04-30-18-37-58.jpg",
       alt: "Спальня с видом на бассейн",
     },
     {
-      src: "https://i.ibb.co/jkhpv3W/IMG-6370.jpg",
+      src: "https://i.postimg.cc/D856cBJ1/photo-3-2025-04-30-18-37-58.jpg",
       alt: "Ванная комната с душем",
+    },
+    {
+      src: "https://i.postimg.cc/2L7wMxHR/photo-11-2025-04-30-18-37-58.jpg",
+      alt: "Зона отдыха на открытом воздухе",
     },
   ];
 
