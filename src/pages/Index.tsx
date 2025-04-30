@@ -14,7 +14,7 @@ const Index = () => {
       <div className="relative h-[70vh] bg-gradient-to-r from-blue-900 to-purple-800 overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1500&q=80" 
+            src="https://i.ibb.co/B26Hx8W/background.jpg" // Исправлено с https://ibb.co/B26Hx8WK
             alt="Вилла в Паттайе" 
             className="w-full h-full object-cover opacity-40"
           />

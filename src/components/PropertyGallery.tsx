@@ -3,27 +3,27 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 export const PropertyGallery = () => {
   const images = [
     {
-      src: "https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "https://i.ibb.co/gFcw35t/image1.jpg", // Исправлено с https://ibb.co/gFcw35tf
       alt: "Фасад виллы с бассейном",
     },
     {
-      src: "https://images.unsplash.com/photo-1600607687644-c7f34b5063c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "https://i.ibb.co/4nPGGG6/image2.jpg", // Исправлено с https://ibb.co/4nPGGG64
       alt: "Гостиная с панорамными окнами",
     },
     {
-      src: "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "https://i.ibb.co/b5DgDrW/image3.jpg", // Исправлено с https://ibb.co/b5DgDrWM
       alt: "Кухня открытой планировки",
     },
     {
-      src: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "https://i.ibb.co/F4FNR9m/image4.jpg", // Исправлено с https://ibb.co/F4FNR9mC
       alt: "Спальня с видом на бассейн",
     },
     {
-      src: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "https://i.ibb.co/HpHfc51/image5.jpg", // Исправлено с https://ibb.co/HpHfc517
       alt: "Ванная комната с душем",
     },
     {
-      src: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      src: "https://i.ibb.co/BHxWv16/image6.jpg", // Исправлено с https://ibb.co/BHxWv16s
       alt: "Частный бассейн виллы",
     },
   ];
