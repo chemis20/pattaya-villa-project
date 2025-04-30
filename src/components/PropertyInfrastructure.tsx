@@ -1,11 +1,14 @@
 import React from "react";
 import { InfrastructureFeatures } from "./infrastructure/InfrastructureFeatures";
+import { HomeFeatures } from "./infrastructure/HomeFeatures";
 import { LocationInfo } from "./infrastructure/LocationInfo";
 import { ImageGallery } from "./infrastructure/ImageGallery";
 
 export const PropertyInfrastructure: React.FC = () => {
   return (
     <div className="space-y-8">
+      <HomeFeatures />
+      
       <InfrastructureFeatures title="Инфраструктура проекта MAXX PATTAYA" />
       
       <ImageGallery />
