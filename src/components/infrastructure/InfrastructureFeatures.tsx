@@ -30,8 +30,7 @@ export const InfrastructureFeatures: React.FC<InfrastructureFeaturesProps> = ({ 
       items: [
         "Спа-центр и массаж",
         "Фитнес-зал и йога",
-        "Лаунж-зона для отдыха",
-        "Трансфер до аэропорта"
+        "Лаунж-зона для отдыха"
       ]
     },
     {
