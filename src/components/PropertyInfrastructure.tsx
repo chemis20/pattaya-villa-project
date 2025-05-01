@@ -6,7 +6,7 @@ import { LocationInfo } from "./infrastructure/LocationInfo";
 export const PropertyInfrastructure: React.FC = () => {
   return (
     <div className="space-y-8">
-      <InfrastructureFeatures title="Инфраструктура проекта MAXX PATTAYA" />
+      <InfrastructureFeatures title="Инфраструктура комплекса MAXX PATTAYA" />
       
       <HomeFeatures />
       

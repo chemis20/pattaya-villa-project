@@ -8,6 +8,7 @@ interface InfrastructureCardProps {
   icon: ReactNode;
   gradientFrom: string;
   colorAccent: string;
+  description?: string;
 }
 
 export const InfrastructureCard: React.FC<InfrastructureCardProps> = ({
@@ -15,7 +16,8 @@ export const InfrastructureCard: React.FC<InfrastructureCardProps> = ({
   items,
   icon,
   gradientFrom,
-  colorAccent
+  colorAccent,
+  description
 }) => {
   const getGradientClass = (from: string) => {
     const gradients = {
@@ -54,12 +56,12 @@ export const InfrastructureCard: React.FC<InfrastructureCardProps> = ({
           <div className={`w-10 h-10 rounded-full ${getIconClass(colorAccent)} flex items-center justify-center mr-3`}>
             {icon}
           </div>
-          <h4 className="text-lg font-semibold text-gray-900">{title}</h4>
+          <h4 className="text-base font-medium text-gray-900">{title}</h4>
         </div>
         <ul className="space-y-3">
           {items.map((item, index) => (
             <li key={index} className="flex items-start">
-              <Check className={`h-5 w-5 mr-2 flex-shrink-0 ${getCheckClass(colorAccent)}`} />
+              <Check className={`h-4 w-4 mr-2 flex-shrink-0 ${getCheckClass(colorAccent)}`} />
               <span className="text-gray-700">{item}</span>
             </li>
           ))}
