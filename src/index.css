@@ -94,8 +94,13 @@
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground;
   }
+  
+  .prose p {
+    margin-bottom: 1.5rem;
+  }
+}
+
 }
