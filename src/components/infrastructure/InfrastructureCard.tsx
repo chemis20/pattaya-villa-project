@@ -60,8 +60,8 @@ export const InfrastructureCard: React.FC<InfrastructureCardProps> = ({
         </div>
         <ul className="space-y-3">
           {items.map((item, index) => (
-            <li key={index} className="flex items-start">
-              <Check className={`h-4 w-4 mr-2 flex-shrink-0 ${getCheckClass(colorAccent)}`} />
+            <li key={index} className="flex items-center">
+              <Check className={`h-4 w-4 mr-2 mt-0 flex-shrink-0 ${getCheckClass(colorAccent)}`} />
               <span className="text-gray-700">{item}</span>
             </li>
           ))}
