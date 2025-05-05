@@ -52,8 +52,8 @@ const Index = () => {
         <div className="relative container mx-auto px-4 h-full flex flex-col justify-end pb-16">
           <div className="max-w-3xl mb-8">
             <span className="inline-block bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium mb-4">Премиальная недвижимость</span>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Двухэтажная вилла с бассейном в Паттайе</h1>
-            <p className="text-xl text-white/90">Современная вилла 115 кв.м. с 2 спальнями в элитном районе На Джомтьен</p>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Двуэтажная вилла с бассейном в Паттайе</h1>
+            <p className="text-xl text-white/90">Современная вилла 115 кв.м. с 2 спальнями в элитном районе На Дкeомьен</p>
           </div>
           <div className="flex flex-wrap gap-4">
             <a href="https://wa.me/79142055535" target="_blank" rel="noopener noreferrer">
@@ -97,7 +97,7 @@ const Index = () => {
             <Card className="sticky top-4">
               <CardContent className="p-6">
                 <div className="text-center mb-6">
-                  <span className="text-2xl font-bold text-purple-600">от 12,907,600 ¢</span>
+                  <span className="text-2xl font-bold text-purple-600">от 12,907,600 ₽</span>
                   <p className="text-gray-500">7% годовых в течение 10 лет</p>
                 </div>
 
@@ -147,7 +147,7 @@ const Index = () => {
                             id="phone" 
                             value={phone} 
                             onChange={(e) => setPhone(e.target.value)} 
-                            placeholder="+7 (XXX) XXX-XX-XX" 
+                            placeholder=". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "+7 (XXX) XXX-XX-XX" 
                             required 
                           />
                         </div>
