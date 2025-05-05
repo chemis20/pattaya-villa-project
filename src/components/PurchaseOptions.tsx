@@ -1,4 +1,4 @@
-:import React, { useState } from "react");
+import React, { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PurchaseCard } from "./purchase/PurchaseCard";
 
@@ -86,7 +86,7 @@ export const PurchaseOptions: React.FC = () => {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
         <h2 className="text-2xl font-bold text-gray-900">Условия приобретения</h2>
         <div className="flex items-center bg-purple-50 text-purple-800 px-4 py-2 rounded-md">
-          <span className="text-2xl font-bold">от 12,907,600 РО</span>
+          <span className="text-2xl font-bold">от 12,225,000 ₽</span>
         </div>
       </div>
 
