@@ -1,4 +1,4 @@
-import { useState } from "react");
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -11,9 +11,9 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 const Index = () => {
-  const [name, setName] = useState(""");
-  const [phone, setPhone] = useState(""");
-  const [city, setCity] = useState(""");
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [city, setCity] = useState("");
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -97,7 +97,7 @@ const Index = () => {
             <Card className="sticky top-4">
               <CardContent className="p-6">
                 <div className="text-center mb-6">
-                  <span className="text-2xl font-bold text-purple-600">от 12,907,600 ¨</span>
+                  <span className="text-2xl font-bold text-purple-600">от 12,907,600 €</span>
                   <p className="text-gray-500">7% годовых в течение 10 лет</p>
                 </div>
 
@@ -135,31 +135,31 @@ const Index = () => {
                           <Label htmlFor="name">Ваше имя</Label>
                           <Input 
                             id="name" 
-                            value={name} 
-                            onChange={(e) => setName(e.target.value)} 
-                            placeholder="Иван Иванов" 
-                            required 
-                          />
+            value={name} 
+            onChange={(e) => setName(e.target.value)} 
+            placeholder="Иван Иванов" 
+            required 
+          />
                         </div>
                         <div>
                           <Label htmlFor="phone">Номер телефона</Label>
                           <Input 
                             id="phone" 
-                            value={phone} 
-                            onChange={(e) => setPhone(e.target.value)} 
-                            placeholder="+7 (XXX) XXX-XX-XX" 
-                            required 
-                          />
+            value={phone} 
+            onChange={(e) => setPhone(e.target.value)} 
+            placeholder="+7 (XXX) XXX-XX-XX" 
+            required 
+          />
                         </div>
                         <div>
                           <Label htmlFor="city">Ваш город</Label>
                           <Input 
                             id="city" 
-                            value={city} 
-                            onChange={(e) => setCity(e.target.value)} 
-                            placeholder="Москва" 
-                            required 
-                          />
+            value={city} 
+            onChange={(e) => setCity(e.target.value)} 
+            placeholder="Москва" 
+            required 
+          />
                         </div>
                         <Button type="submit" className="w-full">Отправить</Button>
                       </form>
