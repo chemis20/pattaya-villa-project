@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from "react");
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PurchaseCard } from "./purchase/PurchaseCard";
 
@@ -20,7 +20,7 @@ export const PurchaseOptions: React.FC = () => {
     };
     
     // Простая имитация отправки данных на сервер
-    console.log("Отправка данных на email ilmos03@bk.ru:", formData);
+    console.log(" Отправка данных на email ilmos03@bk.ru:", formData);
     
     // Очистка формы после отправки
     setName("");
@@ -30,7 +30,7 @@ export const PurchaseOptions: React.FC = () => {
     setShowCashForm(false);
     
     // Здесь был бы код для реальной отправки данных на сервер/email
-    alert("Спасибо! Ваша заявка принята. Мы свяжемся с вами в ближайшее время.");
+    alert(" Спасибо! Ваша заявка принята. Мы свяжемся с вами в ближайшее время.");
   };
 
   const mortgageFeatures = [
@@ -86,10 +86,10 @@ export const PurchaseOptions: React.FC = () => {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
         <h2 className="text-2xl font-bold text-gray-900">Условия приобретения</h2>
         <div className="flex items-center bg-purple-50 text-purple-800 px-4 py-2 rounded-md">
-          <span className="text-2xl font-bold">от 12,225,000 ₽</span>
+          <span className="text-2xl font-bold">от 12,907,600 РР</span>
         </div>
       </div>
-
+      
       <Tabs defaultValue="mortgage" className="w-full">
         <TabsList className="grid w-full grid-cols-2">
           <TabsTrigger value="mortgage">С ипотекой</TabsTrigger>
