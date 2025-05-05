@@ -26,7 +26,7 @@ const Index = () => {
     };
     
     // Простая имитация отправки данных на сервер
-    console.log("Отправка данных на email ilmos03@bk.ru:", formData);
+    console.log(" Отправка данных на email ilmos03@bk.ru:", formData);
     
     // Очистка формы после отправки
     setName("");
@@ -34,7 +34,7 @@ const Index = () => {
     setCity("");
     
     // Здесь был бы код для реальной отправки данных на сервер/email
-    alert("Спасибо! Ваша заявка принята. Мы свяжемся с вами в ближайшее время.");
+    alert(" Спасибо! Ваша заявка принята. Мы свяжемся с вами в ближайшее время. ");
   };
 
   return (
@@ -97,7 +97,7 @@ const Index = () => {
             <Card className="sticky top-4">
               <CardContent className="p-6">
                 <div className="text-center mb-6">
-                  <span className="text-2xl font-bold text-purple-600">от 12,225,000 ₽</span>
+                  <span className="text-2xl font-bold text-purple-600">от 12,907,600 ¢</span>
                   <p className="text-gray-500">7% годовых в течение 10 лет</p>
                 </div>
 
@@ -126,8 +126,7 @@ const Index = () => {
                   </a>
                   
                   <div className="w-full">
-                    <Button variant="outline" className="w-full mb-3" onClick={() => document.getElementById('call-form')?.classList.toggle('hidden')}>
-                      Позвонить
+                    <Button variant="outline" className="w-full mb-3" onClick={() => document.getElementById('call-form')?.classList.toggle('hidden')}> Позвонить
                     </Button>
                     
                     <div id="call-form" className="hidden p-4 bg-gray-50 rounded-lg mt-2">
