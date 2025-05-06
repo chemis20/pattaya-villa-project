@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
@@ -27,8 +26,8 @@ export const HeroSection: React.FC = () => {
       <div className="relative container mx-auto px-4 h-full flex flex-col justify-end pb-16">
         <div className="max-w-3xl mb-8">
           <span className="inline-block bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium mb-4">{t('premium_property')}</span>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">{t('villa_title')}</h1>
-          <p className="text-xl text-white/90">{t('villa_subtitle')}</p>
+          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-4 break-words">{t('villa_title')}</h1>
+          <p className="text-base sm:text-xl text-white/90">{t('villa_subtitle')}</p>
         </div>
         <div className="flex flex-wrap gap-4">
           <a href="https://wa.me/79142055535" target="_blank" rel="noopener noreferrer">
