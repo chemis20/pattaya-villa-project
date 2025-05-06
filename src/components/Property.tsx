@@ -1,4 +1,3 @@
-
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -34,7 +33,19 @@ export const Property = () => {
       <div className="prose max-w-none">
         <p>
           <strong>{t('villa_info')}</strong><br />
-          {t('villa_desc')}
+          {language === 'ru' ? (
+            <>
+              Современная двухэтажная вилла площадью 115 кв.м. в <a href="https://www.google.com/maps/place/MAXXPATTAYA/@12.8399765,100.9375112,12.19z/data=!4m6!3m5!1s0x310293f3ed72f1f9:0x164cbdc5735f41ae!8m2!3d12.8470104!4d100.9678802!16s%2Fg%2F11lm6s2qcy?entry=ttu&g_ep=EgoyMDI1MDQzMC4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 transition-colors">престижном районе На Джомтьен в Паттайе</a>. Вилла включает 2 спальни, 3 санузла, соединенные кухню с залом и бассейн за или перед домом (есть 2 типа планировки).
+            </>
+          ) : language === 'en' ? (
+            <>
+              Modern two-story villa with an area of 115 sq.m. in the <a href="https://www.google.com/maps/place/MAXXPATTAYA/@12.8399765,100.9375112,12.19z/data=!4m6!3m5!1s0x310293f3ed72f1f9:0x164cbdc5735f41ae!8m2!3d12.8470104!4d100.9678802!16s%2Fg%2F11lm6s2qcy?entry=ttu&g_ep=EgoyMDI1MDQzMC4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 transition-colors">prestigious Na Jomtien area in Pattaya</a>. The villa includes 2 bedrooms, 3 bathrooms, connected kitchen with a hall, and a pool behind or in front of the house (there are 2 types of layouts).
+            </>
+          ) : (
+            <>
+              芭堤雅那镇区<a href="https://www.google.com/maps/place/MAXXPATTAYA/@12.8399765,100.9375112,12.19z/data=!4m6!3m5!1s0x310293f3ed72f1f9:0x164cbdc5735f41ae!8m2!3d12.8470104!4d100.9678802!16s%2Fg%2F11lm6s2qcy?entry=ttu&g_ep=EgoyMDI1MDQzMC4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 transition-colors">高级区域的现代双层别墅</a>，面积115平方米。别墅包括2间卧室，3间浴室，连接厨房和大厅，以及房屋后面或前面的游泳池（有2种布局类型）。
+            </>
+          )}
         </p>
 
         <p>
@@ -43,11 +54,35 @@ export const Property = () => {
         
         <p>
           <strong>{t('investment_title')}</strong><br />
-          {t('investment_full_desc')}
+          {language === 'ru' ? (
+            <>
+              Район активно развивается: в 15 минутах езды строится новый торговый центр от основателя крупнейшего ТЦ в Таиланде, а также <a href="https://pattayapeople.ru/news/thailand-casinos-2-pattaya-thailand" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 transition-colors">первая в стране игровая зона с казино</a>. Эти проекты значительно повысят стоимость недвижимости после завершения строительства.
+            </>
+          ) : language === 'en' ? (
+            <>
+              The area is actively developing: a new shopping center from the founder of the largest shopping mall in Thailand is being built 15 minutes away, as well as the <a href="https://pattayapeople.ru/news/thailand-casinos-2-pattaya-thailand" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 transition-colors">country's first gaming zone with a casino</a>. These projects will significantly increase the value of real estate after completion.
+            </>
+          ) : (
+            <>
+              该地区正在积极发展：15分钟路程内，泰国最大购物中心的创始人正在建设新的购物中心，以及<a href="https://pattayapeople.ru/news/thailand-casinos-2-pattaya-thailand" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 transition-colors">国内第一个带赌场的游戏区</a>。这些项目完成后将显著提高房地产价值。
+            </>
+          )}
         </p>
 
         <p>
-          {t('operator_desc')}
+          {language === 'ru' ? (
+            <>
+              MAXX PATTAYA реализуется компанией <a href="https://www.bowo.fr/en/blog/the-worlds-top-10-hotel-groups-in-2020" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 transition-colors">H World Group</a> — одним из крупнейших мировых гостиничных операторов, управляющим более 8 800 отелями в 18 странах.
+            </>
+          ) : language === 'en' ? (
+            <>
+              MAXX PATTAYA is implemented by <a href="https://www.bowo.fr/en/blog/the-worlds-top-10-hotel-groups-in-2020" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 transition-colors">H World Group</a> — one of the world's largest hotel operators, managing more than 8,800 hotels in 18 countries.
+            </>
+          ) : (
+            <>
+              MAXX PATTAYA由<a href="https://www.bowo.fr/en/blog/the-worlds-top-10-hotel-groups-in-2020" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-800 transition-colors">华住集团</a>实施 — 全球最大的酒店运营商之一，管理着18个国家的8,800多家酒店。
+            </>
+          )}
         </p>
         
         <p>
