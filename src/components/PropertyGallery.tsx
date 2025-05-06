@@ -1,3 +1,4 @@
+
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 export const PropertyGallery = () => {
@@ -39,7 +40,7 @@ export const PropertyGallery = () => {
           <img
             src={images[0].src}
             alt={images[0].alt}
-            className="w-full h-full object-cover transition-all hover:scale-105 duration-300"
+            className="w-full h-full object-cover"
           />
         </AspectRatio>
       </div>
@@ -51,7 +52,7 @@ export const PropertyGallery = () => {
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-full object-cover transition-all group-hover:scale-105 duration-300"
+                className="w-full h-full object-cover"
               />
             </AspectRatio>
           </div>
