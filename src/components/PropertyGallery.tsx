@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 export const PropertyGallery: React.FC = () => {
@@ -34,30 +34,38 @@ export const PropertyGallery: React.FC = () => {
     }
   ];
 
+  const [selectedImage, setSelectedImage] = useState(0);
+
   return (
     <div className="space-y-6">
       <div className="relative">
         <AspectRatio ratio={16 / 9} className="bg-muted overflow-hidden rounded-lg">
           <img
-            src={images[0].src}
-            alt={images[0].alt}
+            src={images[selectedImage].src}
+            alt={images[selectedImage].alt}
             className="w-full h-full object-cover"
+            style={{ imageRendering: "high-quality" }}
             loading="eager"
-            decoding="sync"
+            decoding="async"
           />
         </AspectRatio>
       </div>
       
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-        {images.slice(1).map((image, index) => (
-          <div key={index} className="relative overflow-hidden rounded-lg">
+        {images.map((image, index) => (
+          <div 
+            key={index} 
+            className={`relative overflow-hidden rounded-lg cursor-pointer ${selectedImage === index ? 'ring-2 ring-purple-600' : ''}`}
+            onClick={() => setSelectedImage(index)}
+          >
             <AspectRatio ratio={4 / 3} className="bg-muted">
               <img
                 src={image.src}
                 alt={image.alt}
                 className="w-full h-full object-cover"
+                style={{ imageRendering: "high-quality" }}
                 loading="eager"
-                decoding="sync"
+                decoding="async"
               />
             </AspectRatio>
           </div>
@@ -66,3 +74,5 @@ export const PropertyGallery: React.FC = () => {
     </div>
   );
 };
+
+export default PropertyGallery;
