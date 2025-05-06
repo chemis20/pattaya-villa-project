@@ -51,6 +51,15 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
+  /* Улучшение качества всех изображений */
+  img {
+    image-rendering: high-quality;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;

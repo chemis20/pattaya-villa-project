@@ -1,63 +1,71 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 export const PropertyGallery: React.FC = () => {
   const images = [
     {
-      src: "https://i.postimg.cc/5XHpnjLV/IMG-6535.jpg",
+      src: "https://i.postimg.cc/02nt1yHj/photo-2025-04-30-18-43-47.jpg",
       alt: "Фасад виллы с бассейном",
     },
     {
-      src: "https://i.postimg.cc/ZvhLqLMY/IMG-6530.jpg",
-      alt: "Вид на виллу",
+      src: "https://i.postimg.cc/5jBnXxf7/photo-2-2025-04-30-18-37-58.jpg",
+      alt: "Просторный первый этаж",
     },
     {
-      src: "https://i.postimg.cc/ZBNcZQjD/IMG-6531.png",
-      alt: "Спальня с видом на бассейн",
+      src: "https://i.postimg.cc/zLHk8Ndk/photo-6-2025-04-30-18-37-58.jpg",
+      alt: "Интерьер виллы",
     },
     {
-      src: "https://i.postimg.cc/PPT4s2D2/IMG-6532.png",
-      alt: "Ванная комната с душем",
+      src: "https://i.postimg.cc/D856cBJ1/photo-3-2025-04-30-18-37-58.jpg",
+      alt: "Комфортная спальня",
     },
     {
-      src: "https://i.postimg.cc/Wq6wqJBG/IMG-6534.jpg",
-      alt: "Зона отдыха на открытом воздухе",
+      src: "https://i.postimg.cc/2L7wMxHR/photo-11-2025-04-30-18-37-58.jpg",
+      alt: "Приватный бассейн",
     },
     {
-      src: "https://i.postimg.cc/Thr94ZKK/IMG-6533.jpg",
+      src: "https://i.postimg.cc/RJ417HvP/photo-10-2025-04-30-18-37-58.jpg",
       alt: "Вид на территорию",
     },
     {
-      src: "https://i.postimg.cc/2bxxVWR4/IMG-6433.jpg",
+      src: "https://i.postimg.cc/9FNLfFyf/IMG-6433.jpg",
       alt: "Общий вид территории",
     }
   ];
+
+  const [selectedImage, setSelectedImage] = useState(0);
 
   return (
     <div className="space-y-6">
       <div className="relative">
         <AspectRatio ratio={16 / 9} className="bg-muted overflow-hidden rounded-lg">
           <img
-            src={images[0].src}
-            alt={images[0].alt}
+            src={images[selectedImage].src}
+            alt={images[selectedImage].alt}
             className="w-full h-full object-cover"
             loading="eager"
-            decoding="sync"
+            decoding="async"
+            style={{ imageRendering: "high-quality" }}
           />
         </AspectRatio>
       </div>
       
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
         {images.slice(1).map((image, index) => (
-          <div key={index} className="relative overflow-hidden rounded-lg">
+          <div 
+            key={index} 
+            className={`relative overflow-hidden rounded-lg cursor-pointer transition-all ${selectedImage === index + 1 ? 'ring-2 ring-purple-500' : 'hover:opacity-90'}`}
+            onClick={() => setSelectedImage(index + 1)}
+          >
             <AspectRatio ratio={4 / 3} className="bg-muted">
               <img
                 src={image.src}
                 alt={image.alt}
                 className="w-full h-full object-cover"
                 loading="eager"
-                decoding="sync"
+                decoding="async"
+                style={{ imageRendering: "high-quality" }}
               />
             </AspectRatio>
           </div>
