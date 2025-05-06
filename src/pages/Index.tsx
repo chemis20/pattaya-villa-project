@@ -60,6 +60,7 @@ const Index = () => {
               <Button size="lg" className="bg-purple-600 hover:bg-purple-700">Получить консультацию</Button>
             </a>
           </div>
+          <span>Паттайя, <a href="https://www.google.com/maps/place/MAXXPATTAYA/@12.8399765,100.9375112,12.19z/data=!4m6!3m5!1s0x310293f3ed72f1f9:0x164cbdc5735f41ae!8m2!3d12.8470104!4d100.9678802!16s%2Fg%2F11lm6s2qcy?entry=ttu&g_ep=EgoyMDI1MDQzMC4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">район На Джомтьен, 7 км от моря</a></span>
         </div>
       </div>
 
@@ -71,7 +72,7 @@ const Index = () => {
             <Property />
             
             <Tabs defaultValue="gallery" className="mt-10">
-              <TabsList className="grid w-full grid-cols-4">
+              <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4">
                 <TabsTrigger value="gallery">Галерея</TabsTrigger>
                 <TabsTrigger value="features">Характеристики</TabsTrigger>
                 <TabsTrigger value="infrastructure">Инфраструктура</TabsTrigger>
@@ -97,7 +98,7 @@ const Index = () => {
             <Card className="sticky top-4">
               <CardContent className="p-6">
                 <div className="text-center mb-6">
-                  <span className="text-2xl font-bold text-purple-600">от 12,907,600 €</span>
+                  <span className="text-2xl font-bold text-purple-600">от 12,907,600 ₽</span>
                   <p className="text-gray-500">7% годовых в течение 10 лет</p>
                 </div>
 
@@ -135,31 +136,31 @@ const Index = () => {
                           <Label htmlFor="name">Ваше имя</Label>
                           <Input 
                             id="name" 
-            value={name} 
-            onChange={(e) => setName(e.target.value)} 
-            placeholder="Иван Иванов" 
-            required 
-          />
+                            value={name} 
+                            onChange={(e) => setName(e.target.value)} 
+                            placeholder="Иван Иванов" 
+                            required 
+                          />
                         </div>
                         <div>
                           <Label htmlFor="phone">Номер телефона</Label>
                           <Input 
                             id="phone" 
-            value={phone} 
-            onChange={(e) => setPhone(e.target.value)} 
-            placeholder="+7 (XXX) XXX-XX-XX" 
-            required 
-          />
+                            value={phone} 
+                            onChange={(e) => setPhone(e.target.value)} 
+                            placeholder="+7 (XXX) XXX-XX-XX" 
+                            required 
+                          />
                         </div>
                         <div>
                           <Label htmlFor="city">Ваш город</Label>
                           <Input 
                             id="city" 
-            value={city} 
-            onChange={(e) => setCity(e.target.value)} 
-            placeholder="Москва" 
-            required 
-          />
+                            value={city} 
+                            onChange={(e) => setCity(e.target.value)} 
+                            placeholder="Москва" 
+                            required 
+                          />
                         </div>
                         <Button type="submit" className="w-full">Отправить</Button>
                       </form>
