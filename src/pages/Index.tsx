@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -41,6 +40,12 @@ const Index = () => {
     setCity("");
     
     alert(t('thank_you'));
+  };
+
+  const getPrice = () => {
+    if (language === 'en') return "from 159,500 $";
+    if (language === 'zh') return "来自1,150,900 ¥";
+    return "от 12,907,600 ₽";
   };
 
   return (
@@ -108,7 +113,7 @@ const Index = () => {
             <Card className="sticky top-4">
               <CardContent className="p-6">
                 <div className="text-center mb-6">
-                  <span className="text-2xl font-bold text-purple-600">от 12,907,600 ₽</span>
+                  <span className="text-2xl font-bold text-purple-600">{getPrice()}</span>
                   <p className="text-gray-500">7% годовых в течение 10 лет</p>
                 </div>
 
@@ -137,8 +142,7 @@ const Index = () => {
                   </a>
                   
                   <div className="w-full">
-                    <Button variant="outline" className="w-full mb-3" onClick={() => document.getElementById('call-form')?.classList.toggle('hidden')}>
-                      {t('call')}
+                    <Button variant="outline" className="w-full mb-3" onClick={() => document.getElementById('call-form')?.classList.toggle('hidden')}>                      {t('call')}
                     </Button>
                     
                     <div id="call-form" className="hidden p-4 bg-gray-50 rounded-lg mt-2">
