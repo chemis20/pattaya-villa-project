@@ -60,7 +60,6 @@ const Index = () => {
               <Button size="lg" className="bg-purple-600 hover:bg-purple-700">Получить консультацию</Button>
             </a>
           </div>
-          <span>Паттайя, <a href="https://www.google.com/maps/place/MAXXPATTAYA/@12.8399765,100.9375112,12.19z/data=!4m6!3m5!1s0x310293f3ed72f1f9:0x164cbdc5735f41ae!8m2!3d12.8470104!4d100.9678802!16s%2Fg%2F11lm6s2qcy?entry=ttu&g_ep=EgoyMDI1MDQzMC4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">район На Джомтьен, 7 км от моря</a></span>
         </div>
       </div>
 

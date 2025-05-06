@@ -3,31 +3,31 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 export const PropertyGallery = () => {
   const images = [
     {
-      src: "https://i.postimg.cc/ZvhLqLMY/IMG-6530.jpg",
+      src: "https://i.postimg.cc/5XHpnjLV/IMG-6535.jpg",
       alt: "Фасад виллы с бассейном",
     },
     {
-      src: "https://i.postimg.cc/ZBNcZQjD/IMG-6531.png",
+      src: "https://i.postimg.cc/ZvhLqLMY/IMG-6530.jpg",
       alt: "Вид на виллу",
     },
     {
-      src: "https://i.postimg.cc/PPT4s2D2/IMG-6532.png",
+      src: "https://i.postimg.cc/ZBNcZQjD/IMG-6531.png",
       alt: "Спальня с видом на бассейн",
     },
     {
-      src: "https://i.postimg.cc/Wq6wqJBG/IMG-6534.jpg",
+      src: "https://i.postimg.cc/PPT4s2D2/IMG-6532.png",
       alt: "Ванная комната с душем",
     },
     {
-      src: "https://i.postimg.cc/Thr94ZKK/IMG-6533.jpg",
+      src: "https://i.postimg.cc/Wq6wqJBG/IMG-6534.jpg",
       alt: "Зона отдыха на открытом воздухе",
     },
     {
-      src: "https://i.postimg.cc/9FNLfFyf/IMG-6433.jpg",
+      src: "https://i.postimg.cc/Thr94ZKK/IMG-6533.jpg",
       alt: "Вид на территорию",
     },
     {
-      src: "https://i.postimg.cc/02nt1yHj/photo-2025-04-30-18-43-47.jpg",
+      src: "https://i.postimg.cc/2bxxVWR4/IMG-6433.jpg",
       alt: "Общий вид территории",
     }
   ];
