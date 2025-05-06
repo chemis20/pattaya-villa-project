@@ -1,7 +1,8 @@
 
+import React from "react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
-export const PropertyGallery = () => {
+export const PropertyGallery: React.FC = () => {
   const images = [
     {
       src: "https://i.postimg.cc/5XHpnjLV/IMG-6535.jpg",

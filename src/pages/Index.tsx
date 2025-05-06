@@ -1,4 +1,43 @@
-<div className="min-h-screen bg-[#F6F6F7]">
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+import { Property } from "@/components/Property";
+import { PropertyGallery } from "@/components/PropertyGallery";
+import { PropertyFeatures } from "@/components/PropertyFeatures";
+import { PropertyInfrastructure } from "@/components/PropertyInfrastructure";
+import { PurchaseOptions } from "@/components/PurchaseOptions";
+
+const Index = () => {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [city, setCity] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Отправка формы
+    const formData = {
+      name,
+      phone,
+      city,
+      timestamp: new Date().toISOString()
+    };
+    
+    console.log("Отправка данных:", formData);
+    
+    // Очистка формы после отправки
+    setName("");
+    setPhone("");
+    setCity("");
+    
+    alert("Спасибо! Ваша заявка принята. Мы свяжемся с вами в ближайшее время.");
+  };
+
+  return (
+    <div className="min-h-screen bg-[#F6F6F7]">
       {/* Hero Section */}
       <div className="relative h-[70vh] bg-gradient-to-r from-blue-900 to-purple-800 overflow-hidden">
         <div className="absolute inset-0">
@@ -139,3 +178,7 @@
         </div>
       </div>
     </div>
+  );
+};
+
+export default Index;
