@@ -101,12 +101,4 @@
   .prose p {
     margin-bottom: 1.5rem;
   }
-  
-  /* Улучшение качества изображений */
-  img {
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    -ms-interpolation-mode: nearest-neighbor;
-    backface-visibility: hidden;
-  }
 }

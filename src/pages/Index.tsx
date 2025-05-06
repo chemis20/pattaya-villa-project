@@ -45,9 +45,8 @@ const Index = () => {
             src="https://i.postimg.cc/Y9Q56w2F/IMG-6432.jpg"
             alt="Вилла в Паттайе" 
             className="w-full h-full object-cover opacity-80"
-            style={{ imageRendering: "high-quality" }}
             loading="eager"
-            decoding="async"
+            decoding="sync"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
