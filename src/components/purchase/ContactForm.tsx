@@ -1,7 +1,10 @@
+
 import React from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "@/translations";
 
 interface ContactFormProps {
   name: string;
@@ -24,40 +27,43 @@ export const ContactForm: React.FC<ContactFormProps> = ({
   onSubmit,
   formId = ""
 }) => {
+  const { language } = useLanguage();
+  const { t } = useTranslation(language);
+  
   return (
     <div className="w-full p-4 bg-gray-50 rounded-lg mt-2">
       <form onSubmit={onSubmit} className="space-y-3">
         <div>
-          <Label htmlFor={`name-form${formId}`}>Ваше имя</Label>
+          <Label htmlFor={`name-form${formId}`}>{t('your_name')}</Label>
           <Input 
             id={`name-form${formId}`} 
             value={name} 
             onChange={(e) => setName(e.target.value)} 
-            placeholder="Иван Иванов" 
+            placeholder="John Smith" 
             required 
           />
         </div>
         <div>
-          <Label htmlFor={`phone-form${formId}`}>Номер телефона</Label>
+          <Label htmlFor={`phone-form${formId}`}>{t('phone_number')}</Label>
           <Input 
             id={`phone-form${formId}`} 
             value={phone} 
             onChange={(e) => setPhone(e.target.value)} 
-            placeholder="+7 (XXX) XXX-XX-XX" 
+            placeholder="+1 (XXX) XXX-XXXX" 
             required 
           />
         </div>
         <div>
-          <Label htmlFor={`city-form${formId}`}>Ваш город</Label>
+          <Label htmlFor={`city-form${formId}`}>{t('your_city')}</Label>
           <Input 
             id={`city-form${formId}`} 
             value={city} 
             onChange={(e) => setCity(e.target.value)} 
-            placeholder="Москва" 
+            placeholder="New York" 
             required 
           />
         </div>
-        <Button type="submit" className="w-full">Отправить</Button>
+        <Button type="submit" className="w-full">{t('send')}</Button>
       </form>
     </div>
   );

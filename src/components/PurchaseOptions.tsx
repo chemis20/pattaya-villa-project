@@ -1,8 +1,14 @@
+
 import React, { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PurchaseCard } from "./purchase/PurchaseCard";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "@/translations";
 
 export const PurchaseOptions: React.FC = () => {
+  const { language } = useLanguage();
+  const { t } = useTranslation(language);
+  
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [city, setCity] = useState("");
@@ -30,7 +36,7 @@ export const PurchaseOptions: React.FC = () => {
     setShowCashForm(false);
     
     // Здесь был бы код для реальной отправки данных на сервер/email
-    alert("Спасибо! Ваша заявка принята. Мы свяжемся с вами в ближайшее время.");
+    alert(t('thank_you'));
   };
 
   const mortgageFeatures = [
@@ -84,7 +90,7 @@ export const PurchaseOptions: React.FC = () => {
   return (
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
-        <h2 className="text-2xl font-bold text-gray-900">Условия приобретения</h2>
+        <h2 className="text-2xl font-bold text-gray-900">{t('purchase_conditions')}</h2>
         <div className="flex items-center bg-purple-50 text-purple-800 px-4 py-2 rounded-md">
           <span className="text-2xl font-bold">от 12,907,600 ₽</span>
         </div>
@@ -92,14 +98,14 @@ export const PurchaseOptions: React.FC = () => {
 
       <Tabs defaultValue="mortgage" className="w-full">
         <TabsList className="grid w-full grid-cols-2">
-          <TabsTrigger value="mortgage">С ипотекой</TabsTrigger>
-          <TabsTrigger value="cash">Без ипотеки</TabsTrigger>
+          <TabsTrigger value="mortgage">{t('with_mortgage')}</TabsTrigger>
+          <TabsTrigger value="cash">{t('without_mortgage')}</TabsTrigger>
         </TabsList>
 
         <TabsContent value="mortgage" className="mt-6">
           <PurchaseCard
-            title="Покупка в ипотеку"
-            description="Выгодные условия приобретения с гарантированным доходом"
+            title={t('mortgage_purchase')}
+            description={t('mortgage_desc')}
             features={mortgageFeatures}
             showForm={showMortgageForm}
             toggleForm={() => setShowMortgageForm(!showMortgageForm)}
@@ -110,8 +116,8 @@ export const PurchaseOptions: React.FC = () => {
 
         <TabsContent value="cash" className="mt-6">
           <PurchaseCard
-            title="Покупка без ипотеки"
-            description="Прямое приобретение объекта недвижимости"
+            title={t('cash_purchase')}
+            description={t('cash_purchase_desc')}
             features={cashFeatures}
             showForm={showCashForm}
             toggleForm={() => setShowCashForm(!showCashForm)}

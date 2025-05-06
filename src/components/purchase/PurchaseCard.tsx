@@ -1,8 +1,11 @@
+
 import React from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { PurchaseFeature } from "./PurchaseFeature";
 import { ContactForm } from "./ContactForm";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "@/translations";
 
 interface PurchaseFeatureData {
   title: string;
@@ -36,6 +39,9 @@ export const PurchaseCard: React.FC<PurchaseCardProps> = ({
   formProps,
   formId = ""
 }) => {
+  const { language } = useLanguage();
+  const { t } = useTranslation(language);
+  
   return (
     <Card>
       <CardHeader>
@@ -57,7 +63,7 @@ export const PurchaseCard: React.FC<PurchaseCardProps> = ({
       </CardContent>
       <CardFooter className="flex flex-col">
         <Button className="w-full mb-3" onClick={toggleForm}>
-          Узнать подробнее
+          {t('learn_more')}
         </Button>
         
         {showForm && (

@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -10,8 +11,14 @@ import { PropertyGallery } from "@/components/PropertyGallery";
 import { PropertyFeatures } from "@/components/PropertyFeatures";
 import { PropertyInfrastructure } from "@/components/PropertyInfrastructure";
 import { PurchaseOptions } from "@/components/PurchaseOptions";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "@/translations";
 
 const Index = () => {
+  const { language } = useLanguage();
+  const { t } = useTranslation(language);
+  
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [city, setCity] = useState("");
@@ -33,7 +40,7 @@ const Index = () => {
     setPhone("");
     setCity("");
     
-    alert("Спасибо! Ваша заявка принята. Мы свяжемся с вами в ближайшее время.");
+    alert(t('thank_you'));
   };
 
   return (
@@ -50,15 +57,18 @@ const Index = () => {
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+        <div className="absolute top-4 right-4 z-10">
+          <LanguageSwitcher />
+        </div>
         <div className="relative container mx-auto px-4 h-full flex flex-col justify-end pb-16">
           <div className="max-w-3xl mb-8">
-            <span className="inline-block bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium mb-4">Премиальная недвижимость</span>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Двуэтажная вилла с бассейном в Паттайе</h1>
-            <p className="text-xl text-white/90">Современная вилла 115 кв.м. с 2 спальнями в элитном районе На Джомтьен</p>
+            <span className="inline-block bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium mb-4">{t('premium_property')}</span>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">{t('villa_title')}</h1>
+            <p className="text-xl text-white/90">{t('villa_subtitle')}</p>
           </div>
           <div className="flex flex-wrap gap-4">
             <a href="https://wa.me/79142055535" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="bg-purple-600 hover:bg-purple-700">Получить консультацию</Button>
+              <Button size="lg" className="bg-purple-600 hover:bg-purple-700">{t('get_consultation')}</Button>
             </a>
           </div>
         </div>
@@ -73,10 +83,10 @@ const Index = () => {
             
             <Tabs defaultValue="gallery" className="mt-10">
               <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4">
-                <TabsTrigger value="gallery">Галерея</TabsTrigger>
-                <TabsTrigger value="features">Характеристики</TabsTrigger>
-                <TabsTrigger value="infrastructure">Инфраструктура</TabsTrigger>
-                <TabsTrigger value="purchase">Покупка</TabsTrigger>
+                <TabsTrigger value="gallery">{t('gallery')}</TabsTrigger>
+                <TabsTrigger value="features">{t('features')}</TabsTrigger>
+                <TabsTrigger value="infrastructure">{t('infrastructure')}</TabsTrigger>
+                <TabsTrigger value="purchase">{t('purchase')}</TabsTrigger>
               </TabsList>
               <TabsContent value="gallery" className="mt-8 md:mt-6">
                 <PropertyGallery />
@@ -104,73 +114,74 @@ const Index = () => {
 
                 <div className="space-y-4 mb-6">
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Площадь</span>
-                    <span className="font-medium">115 м²</span>
+                    <span className="text-gray-600">{t('area')}</span>
+                    <span className="font-medium">115 {t('sqm')}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Спальни</span>
+                    <span className="text-gray-600">{t('bedrooms')}</span>
                     <span className="font-medium">2</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Ванные</span>
+                    <span className="text-gray-600">{t('bathrooms')}</span>
                     <span className="font-medium">3</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Бассейн</span>
-                    <span className="font-medium">Частный</span>
+                    <span className="text-gray-600">{t('pool')}</span>
+                    <span className="font-medium">{t('private_pool')}</span>
                   </div>
                 </div>
 
                 <div className="space-y-3">
                   <a href="https://wa.me/79142055535" target="_blank" rel="noopener noreferrer" className="block w-full">
-                    <Button className="w-full bg-purple-600 hover:bg-purple-700">Написать в What's App</Button>
+                    <Button className="w-full bg-purple-600 hover:bg-purple-700">{t('write_whatsapp')}</Button>
                   </a>
                   
                   <div className="w-full">
-                    <Button variant="outline" className="w-full mb-3" onClick={() => document.getElementById('call-form')?.classList.toggle('hidden')}> Позвонить
+                    <Button variant="outline" className="w-full mb-3" onClick={() => document.getElementById('call-form')?.classList.toggle('hidden')}>
+                      {t('call')}
                     </Button>
                     
                     <div id="call-form" className="hidden p-4 bg-gray-50 rounded-lg mt-2">
                       <form onSubmit={handleSubmit} className="space-y-3">
                         <div>
-                          <Label htmlFor="name">Ваше имя</Label>
+                          <Label htmlFor="name">{t('your_name')}</Label>
                           <Input 
                             id="name" 
                             value={name} 
                             onChange={(e) => setName(e.target.value)} 
-                            placeholder="Иван Иванов" 
+                            placeholder="John Smith" 
                             required 
                           />
                         </div>
                         <div>
-                          <Label htmlFor="phone">Номер телефона</Label>
+                          <Label htmlFor="phone">{t('phone_number')}</Label>
                           <Input 
                             id="phone" 
                             value={phone} 
                             onChange={(e) => setPhone(e.target.value)} 
-                            placeholder="+7 (XXX) XXX-XX-XX" 
+                            placeholder="+1 (XXX) XXX-XXXX" 
                             required 
                           />
                         </div>
                         <div>
-                          <Label htmlFor="city">Ваш город</Label>
+                          <Label htmlFor="city">{t('your_city')}</Label>
                           <Input 
                             id="city" 
                             value={city} 
                             onChange={(e) => setCity(e.target.value)} 
-                            placeholder="Москва" 
+                            placeholder="New York" 
                             required 
                           />
                         </div>
-                        <Button type="submit" className="w-full">Отправить</Button>
+                        <Button type="submit" className="w-full">{t('send')}</Button>
                       </form>
                     </div>
                   </div>
                 </div>
 
                 <div className="mt-6 p-4 bg-purple-50 rounded-lg border border-purple-100">
-                  <h3 className="font-medium text-purple-800 mb-2">Инвестиционная привлекательность</h3>
-                  <p className="text-sm text-gray-600">Гарантированная доходность 7% на протяжении 10 лет. Компенсирует расходы по ипотеке (3%) и обеспечивает дополнительный доход.</p>
+                  <h3 className="font-medium text-purple-800 mb-2">{t('investment_appeal')}</h3>
+                  <p className="text-sm text-gray-600">{t('investment_description')}</p>
                 </div>
               </CardContent>
             </Card>
