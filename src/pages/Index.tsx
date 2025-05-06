@@ -53,7 +53,7 @@ const Index = () => {
           <div className="max-w-3xl mb-8">
             <span className="inline-block bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium mb-4">Премиальная недвижимость</span>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Двуэтажная вилла с бассейном в Паттайе</h1>
-            <p className="text-xl text-white/90">Современная вилла 115 кв.м. с 2 спальнями в элитном районе На Дкеомьен</p>
+            <p className="text-xl text-white/90">Современная вилла 115 кв.м. с 2 спальнями в элитном районе На Джомтьен</p>
           </div>
           <div className="flex flex-wrap gap-4">
             <a href="https://wa.me/79142055535" target="_blank" rel="noopener noreferrer">
