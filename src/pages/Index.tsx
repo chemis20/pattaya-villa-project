@@ -1,44 +1,4 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Property } from "@/components/Property";
-import { PropertyFeatures } from "@/components/PropertyFeatures";
-import { PropertyGallery } from "@/components/PropertyGallery";
-import { PropertyInfrastructure } from "@/components/PropertyInfrastructure";
-import { PurchaseOptions } from "@/components/PurchaseOptions";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-
-const Index = () => {
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [city, setCity] = useState("");
-  
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Отправка формы на email
-    const formData = {
-      name,
-      phone,
-      city,
-      timestamp: new Date().toISOString()
-    };
-    
-    // Простая имитация отправки данных на сервер
-    console.log(" Отправка данных на email ilmos03@bk.ru:", formData);
-    
-    // Очистка формы после отправки
-    setName("");
-    setPhone("");
-    setCity("");
-    
-    // Здесь был бы код для реальной отправки данных на сервер/email
-    alert(" Спасибо! Ваша заявка принята. Мы свяжемся с вами в ближайшее время. ");
-  };
-
-  return (
-    <div className="min-h-screen bg-[#F6F6F7]">
+<div className="min-h-screen bg-[#F6F6F7]">
       {/* Hero Section */}
       <div className="relative h-[70vh] bg-gradient-to-r from-blue-900 to-purple-800 overflow-hidden">
         <div className="absolute inset-0">
@@ -46,6 +6,8 @@ const Index = () => {
             src="https://i.postimg.cc/Y9Q56w2F/IMG-6432.jpg"
             alt="Вилла в Паттайе" 
             className="w-full h-full object-cover opacity-80"
+            loading="eager"
+            decoding="sync"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
@@ -177,7 +139,3 @@ const Index = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default Index;

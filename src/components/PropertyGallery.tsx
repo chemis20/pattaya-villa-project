@@ -41,18 +41,22 @@ export const PropertyGallery = () => {
             src={images[0].src}
             alt={images[0].alt}
             className="w-full h-full object-cover"
+            loading="eager"
+            decoding="sync"
           />
         </AspectRatio>
       </div>
       
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
         {images.slice(1).map((image, index) => (
-          <div key={index} className="relative group overflow-hidden rounded-lg">
+          <div key={index} className="relative overflow-hidden rounded-lg">
             <AspectRatio ratio={4 / 3} className="bg-muted">
               <img
                 src={image.src}
                 alt={image.alt}
                 className="w-full h-full object-cover"
+                loading="eager"
+                decoding="sync"
               />
             </AspectRatio>
           </div>
