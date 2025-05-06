@@ -78,16 +78,16 @@ const Index = () => {
                 <TabsTrigger value="infrastructure">Инфраструктура</TabsTrigger>
                 <TabsTrigger value="purchase">Покупка</TabsTrigger>
               </TabsList>
-              <TabsContent value="gallery" className="mt-6">
+              <TabsContent value="gallery" className="mt-8 md:mt-6">
                 <PropertyGallery />
               </TabsContent>
-              <TabsContent value="features" className="mt-6">
+              <TabsContent value="features" className="mt-8 md:mt-6">
                 <PropertyFeatures />
               </TabsContent>
-              <TabsContent value="infrastructure" className="mt-6">
+              <TabsContent value="infrastructure" className="mt-8 md:mt-6">
                 <PropertyInfrastructure />
               </TabsContent>
-              <TabsContent value="purchase" className="mt-6">
+              <TabsContent value="purchase" className="mt-8 md:mt-6">
                 <PurchaseOptions />
               </TabsContent>
             </Tabs>
