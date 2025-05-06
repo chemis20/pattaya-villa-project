@@ -114,7 +114,13 @@ const Index = () => {
               <CardContent className="p-6">
                 <div className="text-center mb-6">
                   <span className="text-2xl font-bold text-purple-600">{getPrice()}</span>
-                  <p className="text-gray-500">7% годовых в течение 10 лет</p>
+                  <p className="text-gray-500">
+                    {language === 'en' 
+                      ? "7% per annum for 10 years" 
+                      : language === 'zh' 
+                        ? "10年内每年7%收益" 
+                        : "7% годовых в течение 10 лет"}
+                  </p>
                 </div>
 
                 <div className="space-y-4 mb-6">
