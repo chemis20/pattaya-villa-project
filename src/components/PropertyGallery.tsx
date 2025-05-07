@@ -36,43 +36,48 @@ export const PropertyGallery: React.FC = () => {
 
   const [selectedImage, setSelectedImage] = useState(0);
 
+  // Функция для предзагрузки изображений
+  React.useEffect(() => {
+    // Предзагрузка всех изображений
+    images.forEach((image) => {
+      const img = new Image();
+      img.src = image.src;
+    });
+  }, []);
+
   return (
     <div className="space-y-6">
       <div className="relative">
-        <AspectRatio ratio={16 / 9} className="bg-muted overflow-hidden rounded-lg">
+        <div className="bg-muted overflow-hidden rounded-lg" style={{ aspectRatio: "16/9" }}>
           <img
             src={images[selectedImage].src}
             alt={images[selectedImage].alt}
-            className="w-full h-full object-cover"
-            loading="eager"
-            fetchpriority="high"
-            decoding="async"
+            className="w-full h-full"
             style={{ 
-              imageRendering: "high-quality",
-              objectFit: "contain", 
-              backgroundSize: "cover" 
+              objectFit: "cover",
+              maxHeight: "100%",
+              maxWidth: "100%",
+              width: "100%",
+              height: "100%"
             }}
           />
-        </AspectRatio>
+        </div>
       </div>
       
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-        {images.slice(1).map((image, index) => (
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        {images.map((image, index) => (
           <div 
             key={index} 
-            className={`relative overflow-hidden rounded-lg cursor-pointer transition-all ${selectedImage === index + 1 ? 'ring-2 ring-purple-500' : 'hover:opacity-90'}`}
-            onClick={() => setSelectedImage(index + 1)}
+            className={`relative overflow-hidden rounded-lg cursor-pointer transition-all ${selectedImage === index ? 'ring-2 ring-purple-500' : 'hover:opacity-90'}`}
+            onClick={() => setSelectedImage(index)}
           >
-            <AspectRatio ratio={4 / 3} className="bg-muted">
+            <div style={{ aspectRatio: "4/3" }} className="bg-muted">
               <img
                 src={image.src}
                 alt={image.alt}
                 className="w-full h-full object-cover"
-                loading="eager"
-                decoding="async"
-                style={{ imageRendering: "high-quality" }}
               />
-            </AspectRatio>
+            </div>
           </div>
         ))}
       </div>
