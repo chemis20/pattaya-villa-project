@@ -9,27 +9,27 @@ export const PropertyGallery: React.FC = () => {
       alt: "Фасад виллы с бассейном",
     },
     {
-      src: "https://i.postimg.cc/5jBnXxf7/photo-2-2025-04-30-18-37-58.jpg",
-      alt: "Просторный первый этаж",
+      src: "https://i.postimg.cc/MfmbCmFg/IMG-6368.jpg",
+      alt: "Внешний вид виллы",
     },
     {
-      src: "https://i.postimg.cc/FsK5CkHb/photo-6-2025-04-30-18-37-58.jpg",
+      src: "https://i.postimg.cc/XGyszF30/IMG-6369.jpg",
       alt: "Интерьер виллы",
     },
     {
-      src: "https://i.postimg.cc/D856cBJ1/photo-3-2025-04-30-18-37-58.jpg",
-      alt: "Комфортная спальня",
+      src: "https://i.postimg.cc/jDFQY5Mq/IMG-6367.jpg",
+      alt: "Спальня",
     },
     {
-      src: "https://i.postimg.cc/2L7wMxHR/photo-11-2025-04-30-18-37-58.jpg",
-      alt: "Приватный бассейн",
+      src: "https://i.postimg.cc/MMk7XLkh/IMG-6374.jpg",
+      alt: "Территория виллы",
     },
     {
-      src: "https://i.postimg.cc/qvX0gX5p/photo-10-2025-04-30-18-37-58.jpg",
-      alt: "Вид на территорию",
+      src: "https://i.postimg.cc/2Lrn7BSG/IMG-6370.jpg",
+      alt: "Бассейн",
     },
     {
-      src: "https://i.postimg.cc/Y9Q56w2F/IMG-6432.jpg",
+      src: "https://i.postimg.cc/9FNLfFyf/IMG-6433.jpg",
       alt: "Общий вид территории",
     }
   ];
