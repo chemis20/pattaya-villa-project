@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
@@ -7,6 +8,20 @@ import { useTranslation } from "@/translations";
 export const HeroSection: React.FC = () => {
   const { language } = useLanguage();
   const { t } = useTranslation(language);
+
+  const getWhatsAppMessage = () => {
+    let message = "";
+    
+    if (language === 'ru') {
+      message = "Здравствуйте! Интересует покупка виллы в Паттайе. Расскажите подробнее о...";
+    } else if (language === 'en') {
+      message = "Hello! I'm interested in buying a villa in Pattaya. Please tell me more about...";
+    } else {
+      message = "您好！我对在芭提雅购买别墅感兴趣。请告诉我更多...";
+    }
+    
+    return encodeURIComponent(message);
+  };
 
   return (
     <div className="relative h-[70vh] bg-gradient-to-r from-blue-900 to-purple-800 overflow-hidden">
@@ -30,7 +45,7 @@ export const HeroSection: React.FC = () => {
           <p className="text-base sm:text-xl text-white/90">{t('villa_subtitle')}</p>
         </div>
         <div className="flex flex-wrap gap-4">
-          <a href="https://wa.me/79142055535" target="_blank" rel="noopener noreferrer">
+          <a href={`https://wa.me/79142055535?text=${getWhatsAppMessage()}`} target="_blank" rel="noopener noreferrer">
             <Button size="lg" className="bg-purple-600 hover:bg-purple-700">{t('get_consultation')}</Button>
           </a>
         </div>

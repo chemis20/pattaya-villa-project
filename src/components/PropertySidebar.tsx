@@ -42,6 +42,20 @@ export const PropertySidebar: React.FC<PropertySidebarProps> = ({ onFormSubmit }
     return "от 12,907,600 ₽";
   };
 
+  const getWhatsAppMessage = () => {
+    let message = "";
+    
+    if (language === 'ru') {
+      message = "Здравствуйте! Интересует покупка виллы в Паттайе. Расскажите подробнее о...";
+    } else if (language === 'en') {
+      message = "Hello! I'm interested in buying a villa in Pattaya. Please tell me more about...";
+    } else {
+      message = "您好！我对在芭提雅购买别墅感兴趣。请告诉我更多...";
+    }
+    
+    return encodeURIComponent(message);
+  };
+
   return (
     <Card className="sticky top-4">
       <CardContent className="p-6">
@@ -76,7 +90,7 @@ export const PropertySidebar: React.FC<PropertySidebarProps> = ({ onFormSubmit }
         </div>
 
         <div className="space-y-3">
-          <a href="https://wa.me/79142055535" target="_blank" rel="noopener noreferrer" className="block w-full">
+          <a href={`https://wa.me/79142055535?text=${getWhatsAppMessage()}`} target="_blank" rel="noopener noreferrer" className="block w-full">
             <Button className="w-full bg-purple-600 hover:bg-purple-700">{t('write_whatsapp')}</Button>
           </a>
           
