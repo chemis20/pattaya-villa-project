@@ -1,6 +1,5 @@
 
-import React, { useState } from "react";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
+import React, { useState, useEffect } from "react";
 
 export const PropertyGallery: React.FC = () => {
   const images = [
@@ -9,23 +8,23 @@ export const PropertyGallery: React.FC = () => {
       alt: "Фасад виллы с бассейном",
     },
     {
-      src: "https://i.postimg.cc/MfmbCmFg/IMG-6368.jpg",
+      src: "https://i.postimg.cc/rsvnthCy/IMG-6368.jpg",
       alt: "Внешний вид виллы",
     },
     {
-      src: "https://i.postimg.cc/XGyszF30/IMG-6369.jpg",
+      src: "https://i.postimg.cc/Y9dTjfsj/IMG-6369.jpg",
       alt: "Интерьер виллы",
     },
     {
-      src: "https://i.postimg.cc/jDFQY5Mq/IMG-6367.jpg",
+      src: "https://i.postimg.cc/wB6WJRJN/IMG-6367.jpg",
       alt: "Спальня",
     },
     {
-      src: "https://i.postimg.cc/MMk7XLkh/IMG-6374.jpg",
+      src: "https://i.postimg.cc/Tw1CN8tY/IMG-6374.jpg",
       alt: "Территория виллы",
     },
     {
-      src: "https://i.postimg.cc/2Lrn7BSG/IMG-6370.jpg",
+      src: "https://i.postimg.cc/prnkxfNw/IMG-6370.jpg",
       alt: "Бассейн",
     },
     {
@@ -35,44 +34,62 @@ export const PropertyGallery: React.FC = () => {
   ];
 
   const [selectedImage, setSelectedImage] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState<boolean[]>(Array(images.length).fill(false));
+
+  // Предзагрузка изображений
+  useEffect(() => {
+    const preloadImages = () => {
+      images.forEach((image, index) => {
+        const img = new Image();
+        img.src = image.src;
+        img.onload = () => {
+          setImagesLoaded(prev => {
+            const newState = [...prev];
+            newState[index] = true;
+            return newState;
+          });
+        };
+      });
+    };
+
+    preloadImages();
+  }, []);
 
   return (
     <div className="space-y-6">
-      <div className="relative">
-        <AspectRatio ratio={16 / 9} className="bg-muted overflow-hidden rounded-lg">
-          <img
-            src={images[selectedImage].src}
-            alt={images[selectedImage].alt}
-            className="w-full h-full object-cover"
-            loading="eager"
-            fetchpriority="high"
-            decoding="async"
-            style={{ 
-              imageRendering: "high-quality",
-              objectFit: "contain", 
-              backgroundSize: "cover" 
-            }}
-          />
-        </AspectRatio>
+      {/* Главное изображение */}
+      <div className="relative rounded-lg overflow-hidden" style={{ height: "auto", width: "100%" }}>
+        <img
+          src={images[selectedImage].src}
+          alt={images[selectedImage].alt}
+          className="w-full h-auto object-contain"
+          style={{
+            maxHeight: "70vh",
+            margin: "0 auto",
+            display: "block",
+            backgroundColor: "#f5f5f5"
+          }}
+        />
       </div>
       
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-        {images.slice(1).map((image, index) => (
+      {/* Миниатюры */}
+      <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
+        {images.map((image, index) => (
           <div 
             key={index} 
-            className={`relative overflow-hidden rounded-lg cursor-pointer transition-all ${selectedImage === index + 1 ? 'ring-2 ring-purple-500' : 'hover:opacity-90'}`}
-            onClick={() => setSelectedImage(index + 1)}
+            className={`
+              relative overflow-hidden rounded-lg cursor-pointer transition-all
+              ${selectedImage === index ? 'ring-2 ring-purple-500' : 'hover:opacity-90'}
+              aspect-[4/3]
+            `}
+            onClick={() => setSelectedImage(index)}
           >
-            <AspectRatio ratio={4 / 3} className="bg-muted">
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="w-full h-full object-cover"
-                loading="eager"
-                decoding="async"
-                style={{ imageRendering: "high-quality" }}
-              />
-            </AspectRatio>
+            <img
+              src={image.src}
+              alt={image.alt}
+              className="w-full h-full object-cover"
+              loading={index < 4 ? "eager" : "lazy"}
+            />
           </div>
         ))}
       </div>
