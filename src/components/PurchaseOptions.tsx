@@ -1,55 +1,14 @@
 
-import React, { useState } from "react";
+import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useTranslation } from "@/translations";
-import { usePurchaseFeatures } from "@/hooks/usePurchaseFeatures";
 import { MortgageOption } from "./purchase/MortgageOption";
 import { CashOption } from "./purchase/CashOption";
 
 export const PurchaseOptions: React.FC = () => {
   const { language } = useLanguage();
   const { t } = useTranslation(language);
-  
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [city, setCity] = useState("");
-  const [showMortgageForm, setShowMortgageForm] = useState(false);
-  const [showCashForm, setShowCashForm] = useState(false);
-  
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Отправка формы на email
-    const formData = {
-      name,
-      phone,
-      city,
-      timestamp: new Date().toISOString()
-    };
-    
-    // Простая имитация отправки данных на сервер
-    console.log("Отправка данных на email ilmos03@bk.ru:", formData);
-    
-    // Очистка формы после отправки
-    setName("");
-    setPhone("");
-    setCity("");
-    setShowMortgageForm(false);
-    setShowCashForm(false);
-    
-    // Здесь был бы код для реальной отправки данных на сервер/email
-    alert(t('thank_you'));
-  };
-
-  const formProps = {
-    name,
-    setName,
-    phone,
-    setPhone,
-    city,
-    setCity,
-    onSubmit: handleSubmit
-  };
 
   const getPrice = () => {
     if (language === 'en') return "from 159,500 $";
@@ -73,19 +32,11 @@ export const PurchaseOptions: React.FC = () => {
         </TabsList>
 
         <TabsContent value="mortgage" className="mt-6">
-          <MortgageOption 
-            formProps={formProps}
-            showForm={showMortgageForm}
-            toggleForm={() => setShowMortgageForm(!showMortgageForm)}
-          />
+          <MortgageOption />
         </TabsContent>
 
         <TabsContent value="cash" className="mt-6">
-          <CashOption 
-            formProps={formProps}
-            showForm={showCashForm}
-            toggleForm={() => setShowCashForm(!showCashForm)}
-          />
+          <CashOption />
         </TabsContent>
       </Tabs>
     </div>
