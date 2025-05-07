@@ -9,27 +9,27 @@ export const PropertyGallery: React.FC = () => {
       alt: "Фасад виллы с бассейном",
     },
     {
-      src: "https://ltdfoto.ru/images/2024/05/07/photo-2-2025-04-30-18-37-58.jpg",
+      src: "https://i.postimg.cc/5jBnXxf7/photo-2-2025-04-30-18-37-58.jpg",
       alt: "Просторный первый этаж",
     },
     {
-      src: "https://ltdfoto.ru/images/2024/05/07/photo-6-2025-04-30-18-37-58.jpg",
+      src: "https://i.postimg.cc/FsK5CkHb/photo-6-2025-04-30-18-37-58.jpg",
       alt: "Интерьер виллы",
     },
     {
-      src: "https://ltdfoto.ru/images/2024/05/07/photo-3-2025-04-30-18-37-58.jpg",
+      src: "https://i.postimg.cc/D856cBJ1/photo-3-2025-04-30-18-37-58.jpg",
       alt: "Комфортная спальня",
     },
     {
-      src: "https://ltdfoto.ru/images/2024/05/07/photo-11-2025-04-30-18-37-58.jpg",
+      src: "https://i.postimg.cc/2L7wMxHR/photo-11-2025-04-30-18-37-58.jpg",
       alt: "Приватный бассейн",
     },
     {
-      src: "https://ltdfoto.ru/images/2024/05/07/photo-10-2025-04-30-18-37-58.jpg",
+      src: "https://i.postimg.cc/qvX0gX5p/photo-10-2025-04-30-18-37-58.jpg",
       alt: "Вид на территорию",
     },
     {
-      src: "https://ltdfoto.ru/images/2024/05/07/IMG-6433.jpg",
+      src: "https://i.postimg.cc/Y9Q56w2F/IMG-6432.jpg",
       alt: "Общий вид территории",
     }
   ];
