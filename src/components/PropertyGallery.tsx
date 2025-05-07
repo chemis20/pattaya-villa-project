@@ -45,8 +45,13 @@ export const PropertyGallery: React.FC = () => {
             alt={images[selectedImage].alt}
             className="w-full h-full object-cover"
             loading="eager"
+            fetchpriority="high"
             decoding="async"
-            style={{ imageRendering: "high-quality" }}
+            style={{ 
+              imageRendering: "high-quality",
+              objectFit: "contain", 
+              backgroundSize: "cover" 
+            }}
           />
         </AspectRatio>
       </div>
