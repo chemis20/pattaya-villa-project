@@ -2,7 +2,7 @@ export const translations = {
   // Hero section
   premium_property: "高端房产",
   villa_title: "芭堤雅双层泳池别墅",
-  villa_subtitle: "淮耶区精英区域现代150-156平方米别墅，带2间卧室",
+  villa_subtitle: "淮耶区安静区域现代150-156平方米别墅，带2间卧室",
   get_consultation: "获取咨询",
 
   // Property features

@@ -3,7 +3,7 @@ export const translations = {
   premium_property: "Premium Property",
   villa_title: "Two-Story Villa with Pool in Pattaya",
   villa_subtitle:
-    "Modern 150-156 sq.m. villa with 2 bedrooms in the elite Huai Yai area",
+    "Modern 150-156 sq.m. villa with 2 bedrooms in the quiet Huai Yai area",
   get_consultation: "Get Consultation",
 
   // Property features
