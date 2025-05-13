@@ -49,9 +49,8 @@ export const translations = {
     "MAXX PATTAYA由华住集团实施 — 全球最大的酒店运营商之一，管理着18个国家的8,800多家酒店。",
   guaranteed_income: "保证收入",
   income_desc:
-    "酒店运营商提供10年内7%的保证收入。这不仅覆盖抵押贷款费用（每年3%），还提供额外的被动收入。",
-  final_desc:
-    "因此，10年后，您将获得价格从原始成本增长1.5-2倍的房地产，以及130-160万泰铢（约36000-45000美元）的被动收入",
+    "酒店运营商提供10年内7%的保证收入。这不仅覆盖抵押贷款费用，还提供约3%的额外年度被动收入",
+  final_desc: "",
 
   // Property features
   villa_characteristics: "别墅特点",

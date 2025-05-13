@@ -50,9 +50,8 @@ export const translations = {
     "MAXX PATTAYA is implemented by H World Group — one of the world's largest hotel operators, managing more than 8,800 hotels in 18 countries.",
   guaranteed_income: "Guaranteed Income",
   income_desc:
-    "The hotel operator offers a 7% guaranteed income over 10 years. This not only covers mortgage expenses (3% per annum) but also provides additional passive income.",
-  final_desc:
-    "So after 10 years, you will receive real estate that has increased in price 1.5-2 times from the original cost and passive income of 1.3-1.6 million baht (approximately $36,000-$45,000)",
+    "The hotel operator offers a 7% guaranteed income over 10 years. This not only covers mortgage expenses but also provides additional passive income of about 3% per annum",
+  final_desc: "",
 
   // Property features
   villa_characteristics: "Villa Characteristics",
