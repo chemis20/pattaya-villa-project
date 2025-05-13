@@ -1,8 +1,10 @@
-import React from "react";
+import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "@/translations";
 import { PropertyHeader } from "@/components/property/PropertyHeader";
-import { PropertyDescription } from "@/components/property/PropertyDescription";
-import { PropertyInvestment } from "@/components/property/PropertyInvestment";
+import { PropertyDescription } from "./property/PropertyDescription";
+import { PropertyInvestment } from "./property/PropertyInvestment";
 import { PropertyGuarantee } from "@/components/property/PropertyGuarantee";
 
 export const Property = () => {
