@@ -77,7 +77,7 @@ export const PropertySidebar: React.FC<PropertySidebarProps> = ({
         <div className="space-y-4 mb-6">
           <div className="flex justify-between">
             <span className="text-gray-600">{t("area")}</span>
-            <span className="font-medium">115 {t("sqm")}</span>
+            <span className="font-medium">150-156 {t("sqm")}</span>
           </div>
           <div className="flex justify-between">
             <span className="text-gray-600">{t("bedrooms")}</span>
