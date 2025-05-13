@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
@@ -11,24 +10,26 @@ export const HeroSection: React.FC = () => {
 
   const getWhatsAppMessage = () => {
     let message = "";
-    
-    if (language === 'ru') {
-      message = "Здравствуйте! Интересует покупка виллы в Паттайе. Расскажите подробнее о...";
-    } else if (language === 'en') {
-      message = "Hello! I'm interested in buying a villa in Pattaya. Please tell me more about...";
+
+    if (language === "ru") {
+      message =
+        "Здравствуйте! Интересует покупка виллы в Паттайе. Расскажите подробнее о...";
+    } else if (language === "en") {
+      message =
+        "Hello! I'm interested in buying a villa in Pattaya. Please tell me more about...";
     } else {
       message = "您好！我对在芭提雅购买别墅感兴趣。请告诉我更多...";
     }
-    
+
     return encodeURIComponent(message);
   };
 
   return (
     <div className="relative h-[70vh] bg-gradient-to-r from-blue-900 to-purple-800 overflow-hidden">
       <div className="absolute inset-0">
-        <img 
+        <img
           src="https://i.postimg.cc/Y9Q56w2F/IMG-6432.jpg"
-          alt="Вилла в Паттайе" 
+          alt="Вилла в Паттайе"
           className="w-full h-full object-cover opacity-80"
           loading="eager"
           decoding="sync"
@@ -40,14 +41,38 @@ export const HeroSection: React.FC = () => {
       </div>
       <div className="relative container mx-auto px-4 h-full flex flex-col justify-end pb-16">
         <div className="max-w-3xl mb-8">
-          <span className="inline-block bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium mb-4">{t('premium_property')}</span>
-          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-4 break-words">{t('villa_title')}</h1>
-          <p className="text-base sm:text-xl text-white/90">{t('villa_subtitle')}</p>
+          <span className="inline-block bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium mb-4">
+            {t("premium_property")}
+          </span>
+          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-4 break-words">
+            {t("villa_title")}
+          </h1>
+          <p className="text-base sm:text-xl text-white/90">
+            {t("villa_subtitle")}
+          </p>
         </div>
         <div className="flex flex-wrap gap-4">
-          <a href={`https://wa.me/79142055535?text=${getWhatsAppMessage()}`} target="_blank" rel="noopener noreferrer">
-            <Button size="lg" className="bg-purple-600 hover:bg-purple-700">{t('get_consultation')}</Button>
-          </a>
+          {language === "zh" ? (
+            <a
+              href="weixin://dl/chat?wxid_fzyk8aquhlad12"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" className="bg-purple-600 hover:bg-purple-700">
+                {t("get_consultation")}
+              </Button>
+            </a>
+          ) : (
+            <a
+              href={`https://wa.me/79142055535?text=${getWhatsAppMessage()}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" className="bg-purple-600 hover:bg-purple-700">
+                {t("get_consultation")}
+              </Button>
+            </a>
+          )}
         </div>
       </div>
     </div>
