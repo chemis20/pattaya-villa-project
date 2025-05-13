@@ -2,7 +2,7 @@ export const translations = {
   // Hero section
   premium_property: "高端房产",
   villa_title: "芭堤雅双层泳池别墅",
-  villa_subtitle: "那镇区精英区域现代150-156平方米别墅，带2间卧室",
+  villa_subtitle: "淮耶区精英区域现代150-156平方米别墅，带2间卧室",
   get_consultation: "获取咨询",
 
   // Property features
@@ -33,13 +33,13 @@ export const translations = {
   new_building: "新建筑",
   investment: "投资",
   with_furniture: "带家具",
-  villa_full_title: "芭堤雅115平方米双层泳池别墅",
-  villa_location: "芭堤雅，那镇区，距海7公里",
+  villa_full_title: "芭堤雅150-156平方米双层泳池别墅",
+  villa_location: "芭堤雅，淮耶区，距海7公里",
 
   // Property description
   villa_info: "别墅信息",
   villa_desc:
-    "芭堤雅那镇区高级区域的现代双层别墅，面积150-156平方米。别墅包括2间卧室，3间浴室，连接厨房和大厅，以及房屋后面或前面的游泳池（有2种布局类型）。",
+    "芭堤雅淮耶区高级区域的现代双层别墅，面积150-156平方米。别墅包括2间卧室，3间浴室，连接厨房和大厅，以及房屋后面或前面的游泳池（有2种布局类型）。",
   furniture_desc:
     "完整的家具套装、家用电器和空调系统已包含在价格中。这使您在购买房屋后无需额外装修和布置费用即可立即入住。",
   investment_title: "投资吸引力",

@@ -3,7 +3,7 @@ export const translations = {
   premium_property: "Premium Property",
   villa_title: "Two-Story Villa with Pool in Pattaya",
   villa_subtitle:
-    "Modern 150-156 sq.m. villa with 2 bedrooms in the elite Na Jomtien area",
+    "Modern 150-156 sq.m. villa with 2 bedrooms in the elite Huai Yai area",
   get_consultation: "Get Consultation",
 
   // Property features
@@ -34,13 +34,13 @@ export const translations = {
   new_building: "New Building",
   investment: "Investment",
   with_furniture: "Furnished",
-  villa_full_title: "Two-Story Villa 115 sq.m. with Pool in Pattaya",
-  villa_location: "Pattaya, Na Jomtien area, 7 km from the sea",
+  villa_full_title: "Two-Story Villa 150-156 sq.m. with Pool in Pattaya",
+  villa_location: "Pattaya, Huai Yai area, 7 km from the sea",
 
   // Property description
   villa_info: "Villa Information",
   villa_desc:
-    "Modern two-story villa with an area of 150-156 sq.m. in the prestigious Na Jomtien area in Pattaya. The villa includes 2 bedrooms, 3 bathrooms, connected kitchen with a hall, and a pool behind or in front of the house (there are 2 types of layouts).",
+    "Modern two-story villa with an area of 150-156 sq.m. in the prestigious Huai Yai area in Pattaya. The villa includes 2 bedrooms, 3 bathrooms, connected kitchen with a hall, and a pool behind or in front of the house (there are 2 types of layouts).",
   furniture_desc:
     "A complete set of furniture, household appliances, and air conditioning system are already included in the price. This allows you to move in immediately after purchasing the house without additional costs for renovation and furnishing.",
   investment_title: "Investment Appeal",
